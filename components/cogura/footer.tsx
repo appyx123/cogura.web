@@ -1,10 +1,10 @@
 import { Instagram, Facebook, Twitter, MessageCircle } from "lucide-react"
 
 const socials = [
-  { label: "Instagram", href: "https://instagram.com", icon: Instagram },
+  { label: "Instagram", href: "https://www.instagram.com/cogura.coffee/", icon: Instagram },
   { label: "Facebook", href: "https://facebook.com", icon: Facebook },
   { label: "Twitter", href: "https://twitter.com", icon: Twitter },
-  { label: "WhatsApp", href: "https://wa.me/6282246641848", icon: MessageCircle },
+  { label: "WhatsApp", href: "https://wa.me/6282322222346", icon: MessageCircle },
 ]
 
 export function Footer() {
@@ -43,7 +43,7 @@ export function Footer() {
           <div>
             <h3 className="font-display text-sm font-bold uppercase tracking-widest text-primary">Hubungi Kami</h3>
             <p className="mt-4 text-sm text-muted-foreground">Enrekang, Sulawesi Selatan</p>
-            <p className="mt-1 text-sm text-muted-foreground">hello@cogura.id</p>
+            <p className="mt-1 text-sm text-muted-foreground">cogura.official@gmail.com</p>
             <ul className="mt-5 flex gap-3">
               {socials.map((s) => {
                 const Icon = s.icon

@@ -10,7 +10,7 @@ const links = [
   { label: "Products", href: "#products" },
 ]
 
-const WA_URL = "https://wa.me/6282246641848?text=Halo%20COGURA%2C%20saya%20ingin%20bertanya."
+const WA_URL = "https://wa.me/6282322222346?text=Halo%20COGURA%2C%20saya%20ingin%20bertanya."
 
 export function Navbar() {
   const [open, setOpen] = useState(false)

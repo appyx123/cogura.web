@@ -6,13 +6,13 @@ export function Story() {
           <div className="relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
               <img
-                src="https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?auto=format&fit=crop&w=1200&q=80"
+                src="/panen.jpg"
                 alt="Kebun kopi arabika di dataran tinggi Enrekang"
                 className="h-full w-full object-cover"
               />
             </div>
             <div className="absolute -bottom-6 -right-6 hidden h-32 w-32 items-center justify-center rounded-full bg-accent text-center font-display text-sm font-bold leading-tight text-accent-foreground shadow-xl md:flex">
-              Kalosi
+              Enrekang
               <br />
               Est. 1900s
             </div>
@@ -22,19 +22,19 @@ export function Story() {
         <div className="lg:col-span-7">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Our Story</span>
           <h2 className="mt-4 font-display text-3xl font-extrabold leading-tight tracking-tight text-primary text-balance md:text-4xl lg:text-5xl">
-            Warisan kopi dari tanah Kalosi, Enrekang.
+            Warisan kopi dari tanah Gura, Enrekang.
           </h2>
           <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground md:text-[17px]">
             <p>
               Di lereng pegunungan Enrekang, Sulawesi Selatan, tumbuh biji arabika legendaris yang telah dikenal dunia
               sejak awal abad ke-20 dengan nama{" "}
-              <span className="font-semibold text-primary">Kalosi Arabica</span>. Ketinggian 1.400 mdpl, tanah vulkanik
-              yang subur, dan iklim sejuk memberi karakter rasa yang kompleks—floral, berry matang, dengan body yang
+              <span className="font-semibold text-primary">Enrekang Arabika</span>. Ketinggian 1.500 mdpl, tanah vulkanik
+              yang subur, dan iklim sejuk memberi karakter rasa yang kompleks floral, berry matang, dengan body yang
               lembut.
             </p>
             <p>
               COGURA lahir dari keinginan untuk membawa kopi istimewa ini kepada pecinta kopi nusantara. Kami bekerja
-              langsung dengan petani lokal, menjaga setiap proses—mulai dari ceri merah pilihan hingga sangrai—agar cita
+              langsung dengan petani lokal, menjaga setiap proses mulai dari ceri merah pilihan hingga sangrai agar cita
               rasa otentik tetap hidup di setiap seduhan.
             </p>
           </div>

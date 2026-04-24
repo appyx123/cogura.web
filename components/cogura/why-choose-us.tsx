@@ -9,7 +9,7 @@ const features = [
   },
   {
     icon: Mountain,
-    title: "Ketinggian 1.400 mdpl",
+    title: "Ketinggian 1.500 mdpl",
     description:
       "Ditanam di dataran tinggi Enrekang dengan tanah vulkanik subur yang menghasilkan karakter rasa kompleks.",
   },
@@ -17,7 +17,7 @@ const features = [
     icon: Users,
     title: "Pilihan Petani Lokal",
     description:
-      "Kemitraan langsung dengan petani Kalosi memastikan harga yang adil dan kualitas panen terbaik setiap musim.",
+      "Kemitraan langsung dengan petani lokal memastikan harga yang adil dan kualitas panen terbaik setiap musim.",
   },
 ]
 

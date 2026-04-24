@@ -1,7 +1,7 @@
 import { ArrowRight, Leaf } from "lucide-react"
 
 const WA_ORDER_URL =
-  "https://wa.me/6282246641848?text=Halo%20COGURA%2C%20saya%20ingin%20memesan%20kopi%20Arabika%20Enrekang."
+  "https://wa.me/6282322222346?text=Halo%20COGURA%2C%20saya%20ingin%20memesan%20kopi%20Arabika%20Enrekang."
 
 export function Hero() {
   return (
@@ -44,7 +44,7 @@ export function Hero() {
           <dl className="mt-12 grid max-w-md grid-cols-3 gap-4 border-t border-border pt-8">
             <div>
               <dt className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Ketinggian</dt>
-              <dd className="mt-1 font-display text-2xl font-bold text-primary">1400m</dd>
+              <dd className="mt-1 font-display text-2xl font-bold text-primary">1500m</dd>
             </div>
             <div>
               <dt className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Roasted</dt>
@@ -59,11 +59,11 @@ export function Hero() {
 
         {/* Imagery */}
         <div className="relative">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-2xl shadow-primary/20">
+          <div className="relative aspect-square md:aspect-[4/5] overflow-hidden rounded-[2rem] shadow-2xl shadow-primary/20">
             <img
-              src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1200&q=80"
-              alt="Secangkir kopi Arabika Enrekang dengan latar latte art yang elegan"
-              className="h-full w-full object-cover"
+              src="/hero_image.jpg"
+              alt="Kopi Arabika Enrekang COGURA dalam berbagai ukuran kemasan"
+              className="h-full w-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent" />
           </div>
@@ -79,7 +79,7 @@ export function Hero() {
                 />
               </div>
               <div>
-                <p className="font-display text-sm font-bold text-primary">Kalosi Arabica</p>
+                <p className="font-display text-sm font-bold text-primary">Enrekang Arabika</p>
                 <p className="text-xs text-muted-foreground">Panen Pilihan 2025</p>
               </div>
             </div>
@@ -88,7 +88,7 @@ export function Hero() {
               <span className="font-display text-sm font-bold text-accent">86.5</span>
             </div>
           </div>
-          
+
           {/* Decorative blob */}
           <div className="absolute -right-8 -top-8 -z-10 h-40 w-40 rounded-full bg-accent/20 blur-3xl" aria-hidden="true" />
           <div className="absolute -left-12 bottom-24 -z-10 h-52 w-52 rounded-full bg-primary/10 blur-3xl" aria-hidden="true" />
