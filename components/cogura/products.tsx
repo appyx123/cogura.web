@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useState } from "react"
 import { MessageCircle } from "lucide-react"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
@@ -25,7 +26,7 @@ const products: Product[] = [
     description:
       "Biji kopi mentah berkualitas tinggi dari dataran tinggi Enrekang. Sangat cocok bagi Anda roaster yang ingin mengeksplorasi profil sangrai sendiri.",
     basePrice: "Mulai dari Rp 120.000",
-    image: "/green.jpg",
+    image: "/green.jpeg",
     notes: ["Fresh", "High Altitude"],
     weights: ["1kg", "5kg", "10kg"],
   },
@@ -36,19 +37,19 @@ const products: Product[] = [
     description:
       "Biji kopi sangrai segar yang mengunci aroma dan rasa optimal. Pilihan sempurna untuk digiling mendadak sebelum diseduh.",
     basePrice: "Mulai dari Rp 85.000",
-    image: "/roasted.jpg",
+    image: "/roasted.jpeg",
     notes: ["Citrus", "Brown Sugar", "Floral"],
     weights: ["200g", "500g", "1000g"],
     roasts: ["Light", "Medium", "Dark"],
   },
   {
     id: "ground",
-    name: "Ground Coffee (Bubuk)",
+    name: "Ground Coffee",
     tagline: "Ready to Brew · Convenient",
     description:
       "Kopi bubuk premium yang digiling dengan presisi, siap diseduh dengan kepraktisan maksimal untuk menemani hari-hari Anda.",
     basePrice: "Mulai dari Rp 85.000",
-    image: "/bubuk.jpg",
+    image: "/bubuk.jpeg",
     notes: ["Red Berry", "Dark Chocolate", "Wine"],
     weights: ["200g", "500g", "1000g"],
     roasts: ["Light", "Medium", "Dark"],
@@ -69,10 +70,12 @@ function ProductCard({ product }: { product: Product }) {
   return (
     <article className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10">
       <div className="relative aspect-[4/3] overflow-hidden">
-        <img
+        <Image
           src={product.image || "/placeholder.svg"}
           alt={`Kopi ${product.name} COGURA`}
+          fill
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary backdrop-blur">
           {selectedWeight}

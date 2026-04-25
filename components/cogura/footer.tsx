@@ -43,7 +43,10 @@ export function Footer() {
           <div>
             <h3 className="font-display text-sm font-bold uppercase tracking-widest text-primary">Hubungi Kami</h3>
             <p className="mt-4 text-sm text-muted-foreground">Enrekang, Sulawesi Selatan</p>
-            <p className="mt-1 text-sm text-muted-foreground">cogura.official@gmail.com</p>
+            <div className="mt-1 text-sm text-muted-foreground">
+              {/* Email Obfuscation */}
+              <span>{["cogura", "official"].join(".") + "@" + "gmail.com"}</span>
+            </div>
             <ul className="mt-5 flex gap-3">
               {socials.map((s) => {
                 const Icon = s.icon

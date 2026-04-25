@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export function Story() {
   return (
     <section id="story" className="bg-secondary/40">
@@ -5,10 +7,12 @@ export function Story() {
         <div className="lg:col-span-5">
           <div className="relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
-              <img
+              <Image
                 src="/panen.jpg"
                 alt="Kebun kopi arabika di dataran tinggi Enrekang"
+                fill
                 className="h-full w-full object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>
             <div className="absolute -bottom-6 -right-6 hidden h-32 w-32 items-center justify-center rounded-full bg-accent text-center font-display text-sm font-bold leading-tight text-accent-foreground shadow-xl md:flex">

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { ArrowRight, Leaf } from "lucide-react"
 
 const WA_ORDER_URL =
@@ -60,10 +61,13 @@ export function Hero() {
         {/* Imagery */}
         <div className="relative">
           <div className="relative aspect-square md:aspect-[4/5] overflow-hidden rounded-[2rem] shadow-2xl shadow-primary/20">
-            <img
+            <Image
               src="/hero_image.jpg"
               alt="Kopi Arabika Enrekang COGURA dalam berbagai ukuran kemasan"
+              fill
+              priority
               className="h-full w-full object-cover object-center"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent" />
           </div>
@@ -71,10 +75,12 @@ export function Hero() {
           {/* Floating mini card */}
           <div className="absolute -bottom-8 -left-4 hidden w-64 rounded-2xl border border-border bg-card p-5 shadow-xl sm:block md:-left-8">
             <div className="flex items-center gap-3">
-              <div className="h-12 w-12 overflow-hidden rounded-xl">
-                <img
+              <div className="h-12 w-12 overflow-hidden rounded-xl relative">
+                <Image
                   src="https://images.unsplash.com/photo-1587734195503-904fca47e0e9?auto=format&fit=crop&w=200&q=80"
                   alt="Biji kopi Arabika segar"
+                  width={48}
+                  height={48}
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -97,6 +103,7 @@ export function Hero() {
     </section>
   )
 }
+
 
 
 
