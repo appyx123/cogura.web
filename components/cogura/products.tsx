@@ -74,6 +74,7 @@ function ProductCard({ product }: { product: Product }) {
           src={product.image || "/placeholder.svg"}
           alt={`Kopi ${product.name} COGURA`}
           fill
+          quality={75}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />

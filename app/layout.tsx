@@ -19,17 +19,17 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "COGURA — Taste of Enrekang Arabica",
+  title: "COGURA: Kopi Arabika Premium dari Dataran Tinggi Enrekang",
   description:
-    "Kopi premium dari dataran tinggi Enrekang, Sulawesi Selatan. Diproses dengan dedikasi untuk secangkir kesempurnaan.",
+    "Rasakan kenikmatan sejati kopi Arabika premium dari lereng vulkanik Enrekang, Sulawesi Selatan. Diproses dengan dedikasi penuh untuk kesempurnaan tiap cangkir.",
   generator: "v0.app",
   metadataBase: new URL("https://cogura.store"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "COGURA — Taste of Enrekang Arabica",
-    description: "Kopi premium dari dataran tinggi Enrekang, Sulawesi Selatan. Diproses dengan dedikasi untuk secangkir kesempurnaan.",
+    title: "COGURA: Kopi Arabika Premium dari Dataran Tinggi Enrekang",
+    description: "Rasakan kenikmatan sejati kopi Arabika premium dari lereng vulkanik Enrekang, Sulawesi Selatan. Diproses dengan dedikasi penuh untuk kesempurnaan tiap cangkir.",
     url: "https://cogura.store",
     siteName: "COGURA",
     images: [
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "COGURA — Taste of Enrekang Arabica",
-    description: "Kopi premium dari dataran tinggi Enrekang, Sulawesi Selatan.",
+    title: "COGURA: Kopi Arabika Premium dari Dataran Tinggi Enrekang",
+    description: "Rasakan kenikmatan sejati kopi Arabika premium dari lereng vulkanik Enrekang, Sulawesi Selatan. Diproses dengan dedikasi penuh untuk kesempurnaan tiap cangkir.",
     images: ["/hero_image.jpg"],
   },
   icons: {
@@ -59,8 +59,30 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "COGURA Coffee",
+    "image": "https://cogura.store/logo.svg",
+    "description": "Kopi Arabika Premium dari Enrekang",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Enrekang",
+      "addressRegion": "Sulawesi Selatan",
+      "addressCountry": "ID"
+    },
+    "telephone": "+628000000000",
+    "url": "https://cogura.store"
+  };
+
   return (
     <html lang="id" className={`${montserrat.variable} ${dmSans.variable} bg-background`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+      </head>
       <body className="font-sans antialiased">
         {/* Google Analytics Placeholder */}
         <Script
@@ -81,4 +103,3 @@ export default function RootLayout({
     </html>
   )
 }
-

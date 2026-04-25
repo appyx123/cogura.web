@@ -66,8 +66,9 @@ export function Hero() {
               alt="Kopi Arabika Enrekang COGURA dalam berbagai ukuran kemasan"
               fill
               priority
+              quality={75}
               className="h-full w-full object-cover object-center"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent" />
           </div>
@@ -81,6 +82,7 @@ export function Hero() {
                   alt="Biji kopi Arabika segar"
                   width={48}
                   height={48}
+                  quality={75}
                   className="h-full w-full object-cover"
                 />
               </div>

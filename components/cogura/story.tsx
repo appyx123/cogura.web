@@ -11,8 +11,9 @@ export function Story() {
                 src="/panen.jpg"
                 alt="Kebun kopi arabika di dataran tinggi Enrekang"
                 fill
+                quality={75}
                 className="h-full w-full object-cover"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <div className="absolute -bottom-6 -right-6 hidden h-32 w-32 items-center justify-center rounded-full bg-accent text-center font-display text-sm font-bold leading-tight text-accent-foreground shadow-xl md:flex">
