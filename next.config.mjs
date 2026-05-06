@@ -30,7 +30,10 @@ const nextConfig = {
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
     ];
-  }
+  },
+  experimental: {
+    allowedDevOrigins: ['100.104.165.68'],
+  },
 }
 
 export default nextConfig
