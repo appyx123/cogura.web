@@ -100,27 +100,32 @@ export default function RootLayout({
           #home { background-color: var(--background); }
           h1 { font-family: var(--font-montserrat); font-weight: 800; color: var(--primary); }
         `}} />
+
+        {/* Async CSS Loading via Script to avoid Server Component errors */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                var observer = new MutationObserver(function(mutations) {
-                  mutations.forEach(function(mutation) {
-                    mutation.addedNodes.forEach(function(node) {
-                      if (node.tagName === 'LINK' && node.rel === 'stylesheet') {
-                        if (node.href.indexOf('063moh') !== -1 || node.href.indexOf('12p_95') !== -1) {
-                          node.media = 'print';
-                          node.onload = function() { this.media = 'all'; };
-                        }
-                      }
-                    });
-                  });
+                var chunks = [
+                  '/_next/static/chunks/12p_95xfbanpi.css',
+                  '/_next/static/chunks/063moh~6mhd-~.css'
+                ];
+                chunks.forEach(function(href) {
+                  var link = document.createElement('link');
+                  link.rel = 'preload';
+                  link.as = 'style';
+                  link.href = href;
+                  link.onload = function() { this.rel = 'stylesheet'; };
+                  document.head.appendChild(link);
                 });
-                observer.observe(document.head, { childList: true });
               })();
             `
           }}
         />
+        <noscript>
+          <link rel="stylesheet" href="/_next/static/chunks/12p_95xfbanpi.css" />
+          <link rel="stylesheet" href="/_next/static/chunks/063moh~6mhd-~.css" />
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
