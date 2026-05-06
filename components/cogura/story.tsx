@@ -8,7 +8,7 @@ export function Story() {
           <div className="relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
               <Image
-                src="/panen.jpg"
+                src="/panen.webp"
                 alt="Kebun kopi arabika di dataran tinggi Enrekang"
                 fill
                 quality={75}

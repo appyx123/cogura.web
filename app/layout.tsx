@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "COGURA",
     images: [
       {
-        url: "/hero_image.jpg",
+        url: "/hero_image.webp",
         width: 1200,
         height: 630,
         alt: "COGURA - Taste of Enrekang Arabica",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "COGURA: Kopi Arabika Premium dari Dataran Tinggi Enrekang",
     description: "Rasakan kenikmatan sejati kopi Arabika premium dari lereng vulkanik Enrekang, Sulawesi Selatan. Diproses dengan dedikasi penuh untuk kesempurnaan tiap cangkir.",
-    images: ["/hero_image.jpg"],
+    images: ["/hero_image.webp"],
   },
   icons: {
     icon: "/logo.svg",
@@ -78,6 +78,49 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${montserrat.variable} ${dmSans.variable} bg-background`}>
       <head>
+        <style dangerouslySetInnerHTML={{ __html: `
+          :root {
+            --background: #fdfbf7;
+            --foreground: #1f2421;
+            --primary: #183d33;
+            --accent: #c5a059;
+            --secondary: #f3ede1;
+            --muted-foreground: #5c655f;
+            --font-montserrat: "Montserrat", sans-serif;
+            --font-dm-sans: "DM Sans", sans-serif;
+          }
+          body {
+            background-color: var(--background);
+            color: var(--foreground);
+            font-family: var(--font-dm-sans);
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+          }
+          .font-display { font-family: var(--font-montserrat); }
+          #home { background-color: var(--background); }
+          h1 { font-family: var(--font-montserrat); font-weight: 800; color: var(--primary); }
+        `}} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var observer = new MutationObserver(function(mutations) {
+                  mutations.forEach(function(mutation) {
+                    mutation.addedNodes.forEach(function(node) {
+                      if (node.tagName === 'LINK' && node.rel === 'stylesheet') {
+                        if (node.href.indexOf('063moh') !== -1 || node.href.indexOf('12p_95') !== -1) {
+                          node.media = 'print';
+                          node.onload = function() { this.media = 'all'; };
+                        }
+                      }
+                    });
+                  });
+                });
+                observer.observe(document.head, { childList: true });
+              })();
+            `
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}

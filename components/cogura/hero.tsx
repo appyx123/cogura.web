@@ -62,10 +62,11 @@ export function Hero() {
         <div className="relative">
           <div className="relative aspect-square md:aspect-[4/5] overflow-hidden rounded-[2rem] shadow-2xl shadow-primary/20">
             <Image
-              src="/hero_image.jpg"
+              src="/hero_image.webp"
               alt="Kopi Arabika Enrekang COGURA dalam berbagai ukuran kemasan"
               fill
               priority
+              fetchPriority="high"
               quality={75}
               className="h-full w-full object-cover object-center"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

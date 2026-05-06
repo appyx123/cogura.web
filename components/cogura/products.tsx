@@ -3,8 +3,6 @@
 import Image from "next/image"
 import { useState } from "react"
 import { MessageCircle } from "lucide-react"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Label } from "@/components/ui/label"
 
 type Product = {
   id: string
@@ -26,7 +24,7 @@ const products: Product[] = [
     description:
       "Biji kopi mentah berkualitas tinggi dari dataran tinggi Enrekang. Sangat cocok bagi Anda roaster yang ingin mengeksplorasi profil sangrai sendiri.",
     basePrice: "Mulai dari Rp 120.000",
-    image: "/green.jpeg",
+    image: "/green.webp",
     notes: ["Fresh", "High Altitude"],
     weights: ["1kg", "5kg", "10kg"],
   },
@@ -37,7 +35,7 @@ const products: Product[] = [
     description:
       "Biji kopi sangrai segar yang mengunci aroma dan rasa optimal. Pilihan sempurna untuk digiling mendadak sebelum diseduh.",
     basePrice: "Mulai dari Rp 85.000",
-    image: "/roasted.jpeg",
+    image: "/roasted.webp",
     notes: ["Citrus", "Brown Sugar", "Floral"],
     weights: ["200g", "500g", "1000g"],
     roasts: ["Light", "Medium", "Dark"],
@@ -49,7 +47,7 @@ const products: Product[] = [
     description:
       "Kopi bubuk premium yang digiling dengan presisi, siap diseduh dengan kepraktisan maksimal untuk menemani hari-hari Anda.",
     basePrice: "Mulai dari Rp 85.000",
-    image: "/bubuk.jpeg",
+    image: "/bubuk.webp",
     notes: ["Red Berry", "Dark Chocolate", "Wine"],
     weights: ["200g", "500g", "1000g"],
     roasts: ["Light", "Medium", "Dark"],
