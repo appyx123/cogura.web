@@ -130,10 +130,39 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    /* Menghilangkan kursor 'typing' (I-beam) secara total agar web terasa seperti aplikasi premium */
+    cursor: default !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    caret-color: transparent !important;
   }
+  
+  /* Pastikan elemen interaktif tetap bisa di-klik tapi tanpa kursor ketik */
+  a, button, [role="button"], label, select {
+    cursor: pointer !important;
+  }
+
+  /* Input tetap fungsional namun tanpa kursor ketik visual */
+  input, textarea {
+    cursor: default !important;
+    caret-color: transparent !important;
+    user-select: text !important;
+  }
+
+  /* Mencegah pseudo-elements menyuntikkan kursor atau animasi berkedip */
+  *::after, *::before {
+    caret-color: transparent !important;
+    animation: none !important;
+  }
+
   body {
     @apply bg-background text-foreground;
   }

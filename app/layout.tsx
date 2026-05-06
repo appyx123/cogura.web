@@ -81,54 +81,6 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${montserrat.variable} ${dmSans.variable} bg-background`}>
       <head>
-        <style dangerouslySetInnerHTML={{ __html: `
-          :root {
-            --background: #fdfbf7;
-            --foreground: #1f2421;
-            --primary: #183d33;
-            --accent: #c5a059;
-            --secondary: #f3ede1;
-            --muted-foreground: #5c655f;
-            --font-montserrat: "Montserrat", sans-serif;
-            --font-dm-sans: "DM Sans", sans-serif;
-          }
-          body {
-            background-color: var(--background);
-            color: var(--foreground);
-            font-family: var(--font-dm-sans);
-            margin: 0;
-            -webkit-font-smoothing: antialiased;
-          }
-          .font-display { font-family: var(--font-montserrat); }
-          #home { background-color: var(--background); }
-          h1 { font-family: var(--font-montserrat); font-weight: 800; color: var(--primary); }
-        `}} />
-
-        {/* Async CSS Loading via Script to avoid Server Component errors */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                var chunks = [
-                  '/_next/static/chunks/12p_95xfbanpi.css',
-                  '/_next/static/chunks/063moh~6mhd-~.css'
-                ];
-                chunks.forEach(function(href) {
-                  var link = document.createElement('link');
-                  link.rel = 'preload';
-                  link.as = 'style';
-                  link.href = href;
-                  link.onload = function() { this.rel = 'stylesheet'; };
-                  document.head.appendChild(link);
-                });
-              })();
-            `
-          }}
-        />
-        <noscript>
-          <link rel="stylesheet" href="/_next/static/chunks/12p_95xfbanpi.css" />
-          <link rel="stylesheet" href="/_next/static/chunks/063moh~6mhd-~.css" />
-        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
