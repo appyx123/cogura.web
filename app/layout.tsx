@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import { Montserrat, DM_Sans } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script"
 import "./globals.css"
 
@@ -50,7 +49,11 @@ export const metadata: Metadata = {
     images: ["/hero_image.webp"],
   },
   icons: {
-    icon: "/logo.svg",
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo.svg", type: "image/svg+xml" },
+    ],
+    apple: "/logo.svg",
   },
 }
 
@@ -146,7 +149,6 @@ export default function RootLayout({
           `}
         </Script>
         {children}
-        {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
   )
