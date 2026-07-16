@@ -9,10 +9,10 @@ type Product = {
   name: string
   tagline: string
   description: string
-  basePrice: string
   image: string
   notes: string[]
   weights: string[]
+  prices: Record<string, string>
   roasts?: string[]
 }
 
@@ -23,10 +23,12 @@ const products: Product[] = [
     tagline: "Raw · Fresh · Authentic",
     description:
       "Biji kopi mentah berkualitas tinggi dari dataran tinggi Enrekang. Sangat cocok bagi Anda roaster yang ingin mengeksplorasi profil sangrai sendiri.",
-    basePrice: "Mulai dari Rp 120.000",
     image: "/green.webp",
     notes: ["Fresh", "High Altitude"],
-    weights: ["1kg", "5kg", "10kg"],
+    weights: ["1kg"],
+    prices: {
+      "1kg": "Rp 169.000",
+    },
   },
   {
     id: "whole-bean",
@@ -34,10 +36,14 @@ const products: Product[] = [
     tagline: "Freshly Roasted · Aromatic",
     description:
       "Biji kopi sangrai segar yang mengunci aroma dan rasa optimal. Pilihan sempurna untuk digiling mendadak sebelum diseduh.",
-    basePrice: "Mulai dari Rp 85.000",
     image: "/roasted.webp",
     notes: ["Citrus", "Brown Sugar", "Floral"],
     weights: ["200g", "500g", "1000g"],
+    prices: {
+      "200g": "Rp 39.000",
+      "500g": "Rp 95.000",
+      "1000g": "Rp 189.000",
+    },
     roasts: ["Light", "Medium", "Dark"],
   },
   {
@@ -46,10 +52,14 @@ const products: Product[] = [
     tagline: "Ready to Brew · Convenient",
     description:
       "Kopi bubuk premium yang digiling dengan presisi, siap diseduh dengan kepraktisan maksimal untuk menemani hari-hari Anda.",
-    basePrice: "Mulai dari Rp 85.000",
     image: "/bubuk.webp",
     notes: ["Red Berry", "Dark Chocolate", "Wine"],
     weights: ["200g", "500g", "1000g"],
+    prices: {
+      "200g": "Rp 49.000",
+      "500g": "Rp 109.000",
+      "1000g": "Rp 219.000",
+    },
     roasts: ["Light", "Medium", "Dark"],
   },
 ]
@@ -135,7 +145,7 @@ function ProductCard({ product }: { product: Product }) {
         <div className="mt-8 flex items-center justify-between gap-4 pt-6 border-t border-border/50">
           <div>
             <p className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Harga</p>
-            <p className="font-display text-lg font-extrabold text-primary">{product.basePrice}</p>
+            <p className="font-display text-lg font-extrabold text-primary">{product.prices[selectedWeight]}</p>
           </div>
           <a
             href={waLink}
