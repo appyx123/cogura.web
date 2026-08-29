@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "title": "COGURA - Kopi Arabika Premium dari Dataran Tinggi Enrekang",
+    "description": "Rasakan kenikmatan sejati kopi Arabika premium dari lereng vulkanik Enrekang, Sulawesi Selatan. Diproses dengan dedikasi penuh untuk kesempurnaan tiap cangkir."
+  },
+  "navbar": {
+    "home": "Home",
+    "story": "Story",
+    "products": "Products",
+    "contact": "Hubungi Kami"
+  },
+  "hero": {
+    "badge": "Single Origin · Sulawesi",
+    "headlinePrefix": "Rasakan Otentisitas",
+    "headlineHighlight": "Arabika Enrekang",
+    "description": "Kopi premium dari dataran tinggi Sulawesi Selatan, diproses dengan dedikasi untuk secangkir kesempurnaan.",
+    "ctaOrder": "Pesan Sekarang",
+    "ctaStory": "Cerita Kami",
+    "trustAltitude": "Ketinggian",
+    "trustRoast": "Roasted",
+    "trustFarmers": "Petani",
+    "trustRoastVal": "Fresh",
+    "trustFarmersVal": "Lokal",
+    "cardTitle": "Enrekang Arabika",
+    "cardSub": "Panen Pilihan 2025",
+    "cuppingScore": "Cupping Score"
+  },
+  "story": {
+    "badge": "Our Story",
+    "headline": "Warisan kopi dari tanah Gura, Enrekang.",
+    "p1": "Di lereng pegunungan Enrekang, Sulawesi Selatan, tumbuh biji arabika legendaris yang telah dikenal dunia sejak awal abad ke-20 dengan nama Enrekang Arabika. Ketinggian 1.500 mdpl, tanah vulkanik yang subur, dan iklim sejuk memberi karakter rasa yang kompleks floral, berry matang, dengan body yang lembut.",
+    "p2": "COGURA lahir dari keinginan untuk membawa kopi istimewa ini kepada pecinta kopi nusantara. Kami bekerja langsung dengan petani lokal, menjaga setiap proses mulai dari ceri merah pilihan hingga sangrai agar cita rasa otentik tetap hidup di setiap seduhan.",
+    "metricFarmers": "Petani Mitra",
+    "metricMethods": "Metode Proses",
+    "metricOrigin": "Single Origin"
+  },
+  "products": {
+    "badge": "Pilihan Kopi",
+    "headline": "Varian Kopi Enrekang",
+    "subtitle": "Dari Green Bean mentah hingga kopi bubuk siap seduh, pilih sesuai kebutuhan dan selera Anda.",
+    "roastLevel": "Roast Level",
+    "sizeWeight": "Ukuran / Berat",
+    "price": "Harga",
+    "orderWa": "Pesan via WA",
+    "items": {
+      "greenBean": {
+        "name": "Green Bean Arabica",
+        "tagline": "Raw · Fresh · Authentic",
+        "description": "Biji kopi mentah berkualitas tinggi dari dataran tinggi Enrekang. Sangat cocok bagi Anda roaster yang ingin mengeksplorasi profil sangrai sendiri."
+      },
+      "wholeBean": {
+        "name": "Whole Bean Roasted",
+        "tagline": "Freshly Roasted · Aromatic",
+        "description": "Biji kopi sangrai segar yang mengunci aroma dan rasa optimal. Pilihan sempurna untuk digiling mendadak sebelum diseduh."
+      },
+      "ground": {
+        "name": "Ground Coffee",
+        "tagline": "Ready to Brew · Convenient",
+        "description": "Kopi bubuk premium yang digiling dengan presisi, siap diseduh dengan kepraktisan maksimal untuk menemani hari-hari Anda."
+      }
+    },
+    "waMsg": "Halo COGURA, saya ingin memesan {name} ukuran {weight}.",
+    "waMsgRoast": "Halo COGURA, saya ingin memesan {name} ukuran {weight} dengan tingkat roasting {roast}."
+  },
+  "whyChooseUs": {
+    "badge": "Why COGURA",
+    "headline": "Dibuat dengan dedikasi, diseduh dengan cinta.",
+    "f1Title": "100% Arabika",
+    "f1Desc": "Hanya biji arabika kelas specialty terpilih yang kami proses, tanpa campuran, tanpa kompromi pada kualitas.",
+    "f2Title": "Ketinggian 1.500 mdpl",
+    "f2Desc": "Ditanam di dataran tinggi Enrekang dengan tanah vulkanik subur yang menghasilkan karakter rasa kompleks.",
+    "f3Title": "Pilihan Petani Lokal",
+    "f3Desc": "Kemitraan langsung dengan petani lokal memastikan harga yang adil dan kualitas panen terbaik setiap musim."
+  },
+  "footer": {
+    "tagline": "Taste of Enrekang Arabica. Kopi specialty dari dataran tinggi Sulawesi Selatan, diproses dengan dedikasi.",
+    "menuHeader": "Menu",
+    "contactHeader": "Hubungi Kami",
+    "address": "Enrekang, Sulawesi Selatan",
+    "copy": "COGURA. Taste of Enrekang Arabica. All rights reserved.",
+    "footerNote": "Brewed with care in Sulawesi Selatan."
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Halaman tidak ditemukan.",
+    "description": "Maaf, halaman yang Anda cari tidak tersedia atau telah dipindahkan.",
+    "backHome": "Kembali ke Beranda"
+  }
+}

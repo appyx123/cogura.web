@@ -1,34 +1,36 @@
 import { Coffee, Mountain, Users } from "lucide-react"
+import { Dictionary } from "@/lib/get-dictionary"
 
-const features = [
-  {
-    icon: Coffee,
-    title: "100% Arabika",
-    description:
-      "Hanya biji arabika kelas specialty terpilih yang kami proses, tanpa campuran, tanpa kompromi pada kualitas.",
-  },
-  {
-    icon: Mountain,
-    title: "Ketinggian 1.500 mdpl",
-    description:
-      "Ditanam di dataran tinggi Enrekang dengan tanah vulkanik subur yang menghasilkan karakter rasa kompleks.",
-  },
-  {
-    icon: Users,
-    title: "Pilihan Petani Lokal",
-    description:
-      "Kemitraan langsung dengan petani lokal memastikan harga yang adil dan kualitas panen terbaik setiap musim.",
-  },
-]
+type WhyChooseUsProps = {
+  dict: Dictionary["whyChooseUs"]
+}
 
-export function WhyChooseUs() {
+export function WhyChooseUs({ dict }: WhyChooseUsProps) {
+  const features = [
+    {
+      icon: Coffee,
+      title: dict.f1Title,
+      description: dict.f1Desc,
+    },
+    {
+      icon: Mountain,
+      title: dict.f2Title,
+      description: dict.f2Desc,
+    },
+    {
+      icon: Users,
+      title: dict.f3Title,
+      description: dict.f3Desc,
+    },
+  ]
+
   return (
     <section className="bg-primary text-primary-foreground">
       <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Why COGURA</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">{dict.badge}</span>
           <h2 className="mt-4 font-display text-3xl font-extrabold leading-tight tracking-tight text-balance md:text-4xl lg:text-5xl">
-            Dibuat dengan dedikasi, diseduh dengan cinta.
+            {dict.headline}
           </h2>
         </div>
 

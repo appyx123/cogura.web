@@ -1,13 +1,20 @@
-import { Instagram, Facebook, Twitter, MessageCircle } from "lucide-react"
+import { Instagram, Facebook, Mail } from "lucide-react"
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon"
+import { Locale, Dictionary } from "@/lib/get-dictionary"
+
+type FooterProps = {
+  lang: Locale
+  dict: Dictionary["footer"]
+}
 
 const socials = [
   { label: "Instagram", href: "https://www.instagram.com/cogura.coffee/", icon: Instagram },
   { label: "Facebook", href: "https://facebook.com", icon: Facebook },
-  { label: "Twitter", href: "https://twitter.com", icon: Twitter },
-  { label: "WhatsApp", href: "https://wa.me/6282322222346", icon: MessageCircle },
+  { label: "Email", href: "mailto:cogura.official@gmail.com", icon: Mail },
+  { label: "WhatsApp", href: "https://wa.me/6282322222346", icon: WhatsAppIcon },
 ]
 
-export function Footer() {
+export function Footer({ lang, dict }: FooterProps) {
   return (
     <footer className="border-t border-border bg-background">
       <div className="mx-auto max-w-7xl px-5 py-14 md:px-8">
@@ -15,25 +22,25 @@ export function Footer() {
           <div>
             <span className="font-display text-2xl font-extrabold tracking-[0.18em] text-primary">COGURA</span>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Taste of Enrekang Arabica. Kopi specialty dari dataran tinggi Sulawesi Selatan, diproses dengan dedikasi.
+              {dict.tagline}
             </p>
           </div>
 
           <div>
-            <h3 className="font-display text-sm font-bold uppercase tracking-widest text-primary">Menu</h3>
+            <h3 className="font-display text-sm font-bold uppercase tracking-widest text-primary">{dict.menuHeader}</h3>
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               <li>
-                <a href="#home" className="transition-colors hover:text-primary">
+                <a href={`/${lang}#home`} className="transition-colors hover:text-primary">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#story" className="transition-colors hover:text-primary">
+                <a href={`/${lang}#story`} className="transition-colors hover:text-primary">
                   Story
                 </a>
               </li>
               <li>
-                <a href="#products" className="transition-colors hover:text-primary">
+                <a href={`/${lang}#products`} className="transition-colors hover:text-primary">
                   Products
                 </a>
               </li>
@@ -41,11 +48,12 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-display text-sm font-bold uppercase tracking-widest text-primary">Hubungi Kami</h3>
-            <p className="mt-4 text-sm text-muted-foreground">Enrekang, Sulawesi Selatan</p>
+            <h3 className="font-display text-sm font-bold uppercase tracking-widest text-primary">{dict.contactHeader}</h3>
+            <p className="mt-4 text-sm text-muted-foreground">{dict.address}</p>
             <div className="mt-1 text-sm text-muted-foreground">
-              {/* Email Obfuscation */}
-              <span>{["cogura", "official"].join(".") + "@" + "gmail.com"}</span>
+              <a href="mailto:cogura.official@gmail.com" className="transition-colors hover:text-primary">
+                {["cogura", "official"].join(".") + "@" + "gmail.com"}
+              </a>
             </div>
             <ul className="mt-5 flex gap-3">
               {socials.map((s) => {
@@ -70,9 +78,9 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-border pt-6 sm:flex-row sm:items-center">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} COGURA. Taste of Enrekang Arabica. All rights reserved.
+            &copy; {new Date().getFullYear()} {dict.copy}
           </p>
-          <p className="text-xs text-muted-foreground">Brewed with care in Sulawesi Selatan.</p>
+          <p className="text-xs text-muted-foreground">{dict.footerNote}</p>
         </div>
       </div>
     </footer>

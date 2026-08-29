@@ -1,6 +1,11 @@
 import Image from "next/image"
+import { Dictionary } from "@/lib/get-dictionary"
 
-export function Story() {
+type StoryProps = {
+  dict: Dictionary["story"]
+}
+
+export function Story({ dict }: StoryProps) {
   return (
     <section id="story" className="bg-secondary/40">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:px-8 md:py-28 lg:grid-cols-12 lg:items-center lg:gap-16">
@@ -25,37 +30,27 @@ export function Story() {
         </div>
 
         <div className="lg:col-span-7">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Our Story</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">{dict.badge}</span>
           <h2 className="mt-4 font-display text-3xl font-extrabold leading-tight tracking-tight text-primary text-balance md:text-4xl lg:text-5xl">
-            Warisan kopi dari tanah Gura, Enrekang.
+            {dict.headline}
           </h2>
           <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground md:text-[17px]">
-            <p>
-              Di lereng pegunungan Enrekang, Sulawesi Selatan, tumbuh biji arabika legendaris yang telah dikenal dunia
-              sejak awal abad ke-20 dengan nama{" "}
-              <span className="font-semibold text-primary">Enrekang Arabika</span>. Ketinggian 1.500 mdpl, tanah vulkanik
-              yang subur, dan iklim sejuk memberi karakter rasa yang kompleks floral, berry matang, dengan body yang
-              lembut.
-            </p>
-            <p>
-              COGURA lahir dari keinginan untuk membawa kopi istimewa ini kepada pecinta kopi nusantara. Kami bekerja
-              langsung dengan petani lokal, menjaga setiap proses mulai dari ceri merah pilihan hingga sangrai agar cita
-              rasa otentik tetap hidup di setiap seduhan.
-            </p>
+            <p>{dict.p1}</p>
+            <p>{dict.p2}</p>
           </div>
 
           <div className="mt-10 grid grid-cols-2 gap-6 border-t border-border pt-8 sm:grid-cols-3">
             <div>
               <p className="font-display text-3xl font-bold text-primary">20+</p>
-              <p className="mt-1 text-sm text-muted-foreground">Petani Mitra</p>
+              <p className="mt-1 text-sm text-muted-foreground">{dict.metricFarmers}</p>
             </div>
             <div>
               <p className="font-display text-3xl font-bold text-primary">3</p>
-              <p className="mt-1 text-sm text-muted-foreground">Metode Proses</p>
+              <p className="mt-1 text-sm text-muted-foreground">{dict.metricMethods}</p>
             </div>
             <div>
               <p className="font-display text-3xl font-bold text-primary">100%</p>
-              <p className="mt-1 text-sm text-muted-foreground">Single Origin</p>
+              <p className="mt-1 text-sm text-muted-foreground">{dict.metricOrigin}</p>
             </div>
           </div>
         </div>

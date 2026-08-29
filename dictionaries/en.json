@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "title": "COGURA - Premium Arabica Coffee from Enrekang Highlands",
+    "description": "Experience true delight with premium Arabica coffee from the volcanic slopes of Enrekang, South Sulawesi. Processed with full dedication for a perfect cup every time."
+  },
+  "navbar": {
+    "home": "Home",
+    "story": "Story",
+    "products": "Products",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "badge": "Single Origin · Sulawesi",
+    "headlinePrefix": "Experience Authentic",
+    "headlineHighlight": "Enrekang Arabica",
+    "description": "Premium coffee from the highlands of South Sulawesi, crafted with dedication for a cup of perfection.",
+    "ctaOrder": "Order Now",
+    "ctaStory": "Our Story",
+    "trustAltitude": "Altitude",
+    "trustRoast": "Roast",
+    "trustFarmers": "Farmers",
+    "trustRoastVal": "Fresh",
+    "trustFarmersVal": "Local",
+    "cardTitle": "Enrekang Arabica",
+    "cardSub": "Select Harvest 2025",
+    "cuppingScore": "Cupping Score"
+  },
+  "story": {
+    "badge": "Our Story",
+    "headline": "Coffee heritage from the land of Gura, Enrekang.",
+    "p1": "On the mountain slopes of Enrekang, South Sulawesi, grows legendary Arabica beans known worldwide since the early 20th century as Enrekang Arabica. An altitude of 1,500m above sea level, fertile volcanic soil, and a cool climate impart complex flavors of floral notes, ripe berries, and a smooth body.",
+    "p2": "COGURA was born from a desire to bring this exceptional coffee to coffee enthusiasts across the archipelago. We work directly with local farmers, meticulously managing every process from red cherry selection to roasting so authentic flavor lives in every brew.",
+    "metricFarmers": "Partner Farmers",
+    "metricMethods": "Process Methods",
+    "metricOrigin": "Single Origin"
+  },
+  "products": {
+    "badge": "Coffee Selection",
+    "headline": "Enrekang Coffee Variants",
+    "subtitle": "From raw Green Beans to ready-to-brew ground coffee, choose according to your taste and needs.",
+    "roastLevel": "Roast Level",
+    "sizeWeight": "Size / Weight",
+    "price": "Price",
+    "orderWa": "Order via WA",
+    "items": {
+      "greenBean": {
+        "name": "Green Bean Arabica",
+        "tagline": "Raw · Fresh · Authentic",
+        "description": "High-quality raw coffee beans from Enrekang highlands. Perfect for roasters looking to explore their own roast profiles."
+      },
+      "wholeBean": {
+        "name": "Whole Bean Roasted",
+        "tagline": "Freshly Roasted · Aromatic",
+        "description": "Freshly roasted coffee beans locking in optimal aroma and flavor. Perfect for freshly grinding before brewing."
+      },
+      "ground": {
+        "name": "Ground Coffee",
+        "tagline": "Ready to Brew · Convenient",
+        "description": "Premium ground coffee precision-milled for maximum convenience to accompany your days."
+      }
+    },
+    "waMsg": "Hello COGURA, I would like to order {name} size {weight}.",
+    "waMsgRoast": "Hello COGURA, I would like to order {name} size {weight} with {roast} roast level."
+  },
+  "whyChooseUs": {
+    "badge": "Why COGURA",
+    "headline": "Crafted with dedication, brewed with love.",
+    "f1Title": "100% Arabica",
+    "f1Desc": "Only selected specialty-grade Arabica beans processed, with no blends and no compromises on quality.",
+    "f2Title": "1,500m Altitude",
+    "f2Desc": "Grown in Enrekang highlands with fertile volcanic soil yielding complex flavor profiles.",
+    "f3Title": "Local Farmer Selection",
+    "f3Desc": "Direct partnerships with local farmers ensure fair pricing and top harvest quality every season."
+  },
+  "footer": {
+    "tagline": "Taste of Enrekang Arabica. Specialty coffee from the highlands of South Sulawesi, processed with dedication.",
+    "menuHeader": "Menu",
+    "contactHeader": "Contact Us",
+    "address": "Enrekang, South Sulawesi",
+    "copy": "COGURA. Taste of Enrekang Arabica. All rights reserved.",
+    "footerNote": "Brewed with care in South Sulawesi."
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Page not found.",
+    "description": "Sorry, the page you are looking for is not available or has been moved.",
+    "backHome": "Back to Home"
+  }
+}

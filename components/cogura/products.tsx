@@ -2,7 +2,8 @@
 
 import Image from "next/image"
 import { useState } from "react"
-import { MessageCircle } from "lucide-react"
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon"
+import { Locale, Dictionary } from "@/lib/get-dictionary"
 
 type Product = {
   id: string
@@ -16,63 +17,27 @@ type Product = {
   roasts?: string[]
 }
 
-const products: Product[] = [
-  {
-    id: "green-bean",
-    name: "Green Bean Arabica",
-    tagline: "Raw · Fresh · Authentic",
-    description:
-      "Biji kopi mentah berkualitas tinggi dari dataran tinggi Enrekang. Sangat cocok bagi Anda roaster yang ingin mengeksplorasi profil sangrai sendiri.",
-    image: "/green.webp",
-    notes: ["Fresh", "High Altitude"],
-    weights: ["1kg"],
-    prices: {
-      "1kg": "Rp 169.000",
-    },
-  },
-  {
-    id: "whole-bean",
-    name: "Whole Bean Roasted",
-    tagline: "Freshly Roasted · Aromatic",
-    description:
-      "Biji kopi sangrai segar yang mengunci aroma dan rasa optimal. Pilihan sempurna untuk digiling mendadak sebelum diseduh.",
-    image: "/roasted.webp",
-    notes: ["Citrus", "Brown Sugar", "Floral"],
-    weights: ["200g", "500g", "1000g"],
-    prices: {
-      "200g": "Rp 39.000",
-      "500g": "Rp 95.000",
-      "1000g": "Rp 189.000",
-    },
-    roasts: ["Light", "Medium", "Dark"],
-  },
-  {
-    id: "ground",
-    name: "Ground Coffee",
-    tagline: "Ready to Brew · Convenient",
-    description:
-      "Kopi bubuk premium yang digiling dengan presisi, siap diseduh dengan kepraktisan maksimal untuk menemani hari-hari Anda.",
-    image: "/bubuk.webp",
-    notes: ["Red Berry", "Dark Chocolate", "Wine"],
-    weights: ["200g", "500g", "1000g"],
-    prices: {
-      "200g": "Rp 49.000",
-      "500g": "Rp 109.000",
-      "1000g": "Rp 219.000",
-    },
-    roasts: ["Light", "Medium", "Dark"],
-  },
-]
+type ProductsProps = {
+  lang: Locale
+  dict: Dictionary["products"]
+}
 
-function ProductCard({ product }: { product: Product }) {
+function ProductCard({ product, dict }: { product: Product; dict: Dictionary["products"] }) {
   const [selectedWeight, setSelectedWeight] = useState(product.weights[0])
   const [selectedRoast, setSelectedRoast] = useState(product.roasts?.[0] || "")
 
-  // Build the WhatsApp message
-  let message = `Halo COGURA, saya ingin memesan ${product.name} ukuran ${selectedWeight}.`
+  // Build the WhatsApp message dynamically from dictionary template
+  let message = dict.waMsg
+    .replace("{name}", product.name)
+    .replace("{weight}", selectedWeight)
+
   if (product.roasts) {
-    message = `Halo COGURA, saya ingin memesan ${product.name} ukuran ${selectedWeight} dengan tingkat roasting ${selectedRoast}.`
+    message = dict.waMsgRoast
+      .replace("{name}", product.name)
+      .replace("{weight}", selectedWeight)
+      .replace("{roast}", selectedRoast)
   }
+
   const waLink = `https://wa.me/6282322222346?text=${encodeURIComponent(message)}`
 
   return (
@@ -99,7 +64,7 @@ function ProductCard({ product }: { product: Product }) {
         <div className="mt-6 space-y-5 flex-1">
           {product.roasts && (
             <div className="space-y-3">
-              <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Roast Level</span>
+              <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{dict.roastLevel}</span>
               <div className="flex flex-wrap gap-2">
                 {product.roasts.map((roast) => (
                   <label key={roast} className="cursor-pointer">
@@ -121,7 +86,7 @@ function ProductCard({ product }: { product: Product }) {
           )}
 
           <div className="space-y-3">
-            <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Ukuran / Berat</span>
+            <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{dict.sizeWeight}</span>
             <div className="flex flex-wrap gap-2">
               {product.weights.map((weight) => (
                 <label key={weight} className="cursor-pointer">
@@ -144,7 +109,7 @@ function ProductCard({ product }: { product: Product }) {
 
         <div className="mt-8 flex items-center justify-between gap-4 pt-6 border-t border-border/50">
           <div>
-            <p className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Harga</p>
+            <p className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">{dict.price}</p>
             <p className="font-display text-lg font-extrabold text-primary">{product.prices[selectedWeight]}</p>
           </div>
           <a
@@ -153,8 +118,8 @@ function ProductCard({ product }: { product: Product }) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground shadow-sm transition-all hover:shadow-lg hover:shadow-accent/30 hover:-translate-y-0.5"
           >
-            <MessageCircle className="h-4 w-4" aria-hidden="true" />
-            Pesan via WA
+            <WhatsAppIcon className="h-4 w-4" />
+            {dict.orderWa}
           </a>
         </div>
       </div>
@@ -162,23 +127,68 @@ function ProductCard({ product }: { product: Product }) {
   )
 }
 
-export function Products() {
+export function Products({ dict }: ProductsProps) {
+  const products: Product[] = [
+    {
+      id: "green-bean",
+      name: dict.items.greenBean.name,
+      tagline: dict.items.greenBean.tagline,
+      description: dict.items.greenBean.description,
+      image: "/green.webp",
+      notes: ["Fresh", "High Altitude"],
+      weights: ["1kg"],
+      prices: {
+        "1kg": "Rp 169.000",
+      },
+    },
+    {
+      id: "whole-bean",
+      name: dict.items.wholeBean.name,
+      tagline: dict.items.wholeBean.tagline,
+      description: dict.items.wholeBean.description,
+      image: "/roasted.webp",
+      notes: ["Citrus", "Brown Sugar", "Floral"],
+      weights: ["200g", "500g", "1000g"],
+      prices: {
+        "200g": "Rp 39.000",
+        "500g": "Rp 95.000",
+        "1000g": "Rp 189.000",
+      },
+      roasts: ["Light", "Medium", "Dark"],
+    },
+    {
+      id: "ground",
+      name: dict.items.ground.name,
+      tagline: dict.items.ground.tagline,
+      description: dict.items.ground.description,
+      image: "/bubuk.webp",
+      notes: ["Red Berry", "Dark Chocolate", "Wine"],
+      weights: ["200g", "500g", "1000g"],
+      prices: {
+        "200g": "Rp 49.000",
+        "500g": "Rp 109.000",
+        "1000g": "Rp 219.000",
+      },
+      roasts: ["Light", "Medium", "Dark"],
+    },
+  ]
+
   return (
     <section id="products" className="bg-background">
       <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Pilihan Kopi</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">{dict.badge}</span>
           <h2 className="mt-4 font-display text-3xl font-extrabold leading-tight tracking-tight text-primary text-balance md:text-4xl lg:text-5xl">
-            Varian Kopi Enrekang
+            {dict.headline}
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
-            Dari Green Bean mentah hingga kopi bubuk siap seduh, pilih sesuai kebutuhan dan selera Anda.
+            {dict.subtitle}
           </p>
         </div>
 
         <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {products.map((p) => (
-            <ProductCard key={p.id} product={p} />
+            <ProductCard key={p.id} product={p} dict={dict} />
           ))}
         </div>
       </div>

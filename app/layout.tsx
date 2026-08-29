@@ -18,16 +18,15 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "COGURA: Kopi Arabika Premium dari Dataran Tinggi Enrekang",
+  title: "COGURA - Kopi Arabika Premium dari Dataran Tinggi Enrekang",
   description:
     "Rasakan kenikmatan sejati kopi Arabika premium dari lereng vulkanik Enrekang, Sulawesi Selatan. Diproses dengan dedikasi penuh untuk kesempurnaan tiap cangkir.",
-  generator: "v0.app",
   metadataBase: new URL("https://cogura.store"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "COGURA: Kopi Arabika Premium dari Dataran Tinggi Enrekang",
+    title: "COGURA - Kopi Arabika Premium dari Dataran Tinggi Enrekang",
     description: "Rasakan kenikmatan sejati kopi Arabika premium dari lereng vulkanik Enrekang, Sulawesi Selatan. Diproses dengan dedikasi penuh untuk kesempurnaan tiap cangkir.",
     url: "https://cogura.store",
     siteName: "COGURA",
@@ -44,7 +43,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "COGURA: Kopi Arabika Premium dari Dataran Tinggi Enrekang",
+    title: "COGURA - Kopi Arabika Premium dari Dataran Tinggi Enrekang",
     description: "Rasakan kenikmatan sejati kopi Arabika premium dari lereng vulkanik Enrekang, Sulawesi Selatan. Diproses dengan dedikasi penuh untuk kesempurnaan tiap cangkir.",
     images: ["/hero_image.webp"],
   },
@@ -62,6 +61,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID
+
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -74,32 +75,35 @@ export default function RootLayout({
       "addressRegion": "Sulawesi Selatan",
       "addressCountry": "ID"
     },
-    "telephone": "+628000000000",
+    "telephone": "+6282322222346",
     "url": "https://cogura.store"
   };
 
   return (
-    <html lang="id" className={`${montserrat.variable} ${dmSans.variable} bg-background`}>
+    <html lang="id" className={`${montserrat.variable} ${dmSans.variable} bg-background`} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </head>
-      <body className="font-sans antialiased">
-        {/* Google Analytics Placeholder */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-XXXXXXXXXX');
-          `}
-        </Script>
+      <body className="font-sans antialiased" suppressHydrationWarning>
+        {gaId && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaId}');
+              `}
+            </Script>
+          </>
+        )}
         {children}
       </body>
     </html>
