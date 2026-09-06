@@ -2,7 +2,7 @@ import { getDictionary, Locale } from "@/lib/get-dictionary"
 import type { Metadata } from "next"
 
 export async function generateStaticParams() {
-  return [{ lang: "id" }, { lang: "en" }]
+  return [{ lang: "en" }, { lang: "id" }]
 }
 
 export async function generateMetadata({
