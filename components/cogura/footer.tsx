@@ -1,20 +1,20 @@
-import { Instagram, Facebook, Mail } from "lucide-react"
+import { Instagram, Mail } from "lucide-react"
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon"
 import { Locale, Dictionary } from "@/lib/get-dictionary"
 
 type FooterProps = {
   lang: Locale
   dict: Dictionary["footer"]
+  nav: Dictionary["navbar"]
 }
 
 const socials = [
   { label: "Instagram", href: "https://www.instagram.com/cogura.coffee/", icon: Instagram },
-  { label: "Facebook", href: "https://facebook.com", icon: Facebook },
   { label: "Email", href: "mailto:cogura.official@gmail.com", icon: Mail },
   { label: "WhatsApp", href: "https://wa.me/6282322222346", icon: WhatsAppIcon },
 ]
 
-export function Footer({ lang, dict }: FooterProps) {
+export function Footer({ lang, dict, nav }: FooterProps) {
   return (
     <footer className="border-t border-border bg-background">
       <div className="mx-auto max-w-7xl px-5 py-14 md:px-8">
@@ -31,17 +31,17 @@ export function Footer({ lang, dict }: FooterProps) {
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               <li>
                 <a href={`/${lang}#home`} className="transition-colors hover:text-primary">
-                  Home
+                  {nav.home}
                 </a>
               </li>
               <li>
                 <a href={`/${lang}#story`} className="transition-colors hover:text-primary">
-                  Story
+                  {nav.story}
                 </a>
               </li>
               <li>
                 <a href={`/${lang}#products`} className="transition-colors hover:text-primary">
-                  Products
+                  {nav.products}
                 </a>
               </li>
             </ul>
@@ -52,7 +52,7 @@ export function Footer({ lang, dict }: FooterProps) {
             <p className="mt-4 text-sm text-muted-foreground">{dict.address}</p>
             <div className="mt-1 text-sm text-muted-foreground">
               <a href="mailto:cogura.official@gmail.com" className="transition-colors hover:text-primary">
-                {["cogura", "official"].join(".") + "@" + "gmail.com"}
+                cogura.official@gmail.com
               </a>
             </div>
             <ul className="mt-5 flex gap-3">

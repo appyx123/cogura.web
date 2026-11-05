@@ -1,4 +1,5 @@
-import { getDictionary, Locale } from "@/lib/get-dictionary"
+import { getDictionary, hasLocale } from "@/lib/get-dictionary"
+import { notFound } from "next/navigation"
 import { Navbar } from "@/components/cogura/navbar"
 import { Hero } from "@/components/cogura/hero"
 import { Story } from "@/components/cogura/story"
@@ -12,17 +13,17 @@ export default async function Page({
   params: Promise<{ lang: string }>
 }) {
   const { lang } = await params
-  const locale = (lang === "en" ? "en" : "id") as Locale
-  const dict = await getDictionary(locale)
+  if (!hasLocale(lang)) notFound()
+  const dict = await getDictionary(lang)
 
   return (
     <main className="min-h-screen bg-background">
-      <Navbar lang={locale} dict={dict.navbar} />
-      <Hero lang={locale} dict={dict.hero} />
+      <Navbar lang={lang} dict={dict.navbar} />
+      <Hero lang={lang} dict={dict.hero} />
       <Story dict={dict.story} />
-      <Products lang={locale} dict={dict.products} />
+      <Products lang={lang} dict={dict.products} />
       <WhyChooseUs dict={dict.whyChooseUs} />
-      <Footer lang={locale} dict={dict.footer} />
+      <Footer lang={lang} dict={dict.footer} nav={dict.navbar} />
     </main>
   )
 }

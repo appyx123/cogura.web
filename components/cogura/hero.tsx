@@ -88,9 +88,8 @@ export function Hero({ lang, dict }: HeroProps) {
           <div className="absolute -bottom-8 -left-4 hidden w-64 rounded-2xl border border-border bg-card p-5 shadow-xl sm:block md:-left-8">
             <div className="flex items-center gap-3">
               <div className="h-12 w-12 overflow-hidden rounded-xl relative">
-                {/* TODO: Replace external Unsplash image with a local static asset in /public */}
                 <Image
-                  src="https://images.unsplash.com/photo-1587734195503-904fca47e0e9?auto=format&fit=crop&w=200&q=80"
+                  src="/roasted.webp"
                   alt="Biji kopi Arabika segar"
                   width={48}
                   height={48}

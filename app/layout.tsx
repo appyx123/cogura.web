@@ -22,9 +22,6 @@ export const metadata: Metadata = {
   description:
     "Rasakan kenikmatan sejati kopi Arabika premium dari lereng vulkanik Enrekang, Sulawesi Selatan. Diproses dengan dedikasi penuh untuk kesempurnaan tiap cangkir.",
   metadataBase: new URL("https://cogura.store"),
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     title: "COGURA - Kopi Arabika Premium dari Dataran Tinggi Enrekang",
     description: "Rasakan kenikmatan sejati kopi Arabika premium dari lereng vulkanik Enrekang, Sulawesi Selatan. Diproses dengan dedikasi penuh untuk kesempurnaan tiap cangkir.",
@@ -49,7 +46,6 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/logo.svg", type: "image/svg+xml" },
     ],
     apple: "/logo.svg",

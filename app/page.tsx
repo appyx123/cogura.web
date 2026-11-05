@@ -1,5 +1,12 @@
-import { redirect } from "next/navigation"
-
 export default function RootPage() {
-  redirect("/id")
+  return (
+    <>
+      <meta httpEquiv="refresh" content="0; url=/id" />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.location.replace("/id");`,
+        }}
+      />
+    </>
+  )
 }

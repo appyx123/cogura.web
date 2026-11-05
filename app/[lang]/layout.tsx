@@ -1,5 +1,8 @@
-import { getDictionary, Locale } from "@/lib/get-dictionary"
+import { getDictionary, hasLocale } from "@/lib/get-dictionary"
+import { notFound } from "next/navigation"
 import type { Metadata } from "next"
+
+export const dynamicParams = false
 
 export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "id" }]
@@ -11,16 +14,24 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>
 }): Promise<Metadata> {
   const { lang } = await params
-  const locale = (lang === "en" ? "en" : "id") as Locale
-  const dict = await getDictionary(locale)
+  if (!hasLocale(lang)) notFound()
+  const dict = await getDictionary(lang)
 
   return {
     title: dict.meta.title,
     description: dict.meta.description,
+    alternates: {
+      canonical: `/${lang}`,
+      languages: {
+        id: "/id",
+        en: "/en",
+        "x-default": "/id",
+      },
+    },
     openGraph: {
       title: dict.meta.title,
       description: dict.meta.description,
-      url: `https://cogura.store/${locale}`,
+      url: `https://cogura.store/${lang}`,
       siteName: "COGURA",
       images: [
         {
@@ -30,7 +41,7 @@ export async function generateMetadata({
           alt: "COGURA - Taste of Enrekang Arabica",
         },
       ],
-      locale: locale === "en" ? "en_US" : "id_ID",
+      locale: lang === "en" ? "en_US" : "id_ID",
       type: "website",
     },
     twitter: {
@@ -44,8 +55,22 @@ export async function generateMetadata({
 
 export default async function LangLayout({
   children,
+  params,
 }: {
   children: React.ReactNode
+  params: Promise<{ lang: string }>
 }) {
-  return <>{children}</>
+  const { lang } = await params
+  if (!hasLocale(lang)) notFound()
+
+  return (
+    <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `document.documentElement.lang=${JSON.stringify(lang)};`,
+        }}
+      />
+      {children}
+    </>
+  )
 }
