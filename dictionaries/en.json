@@ -7,6 +7,7 @@
     "home": "Home",
     "story": "Story",
     "products": "Products",
+    "wholesale": "Wholesale",
     "contact": "Contact Us"
   },
   "hero": {
@@ -71,6 +72,21 @@
     "f2Desc": "Grown in Enrekang highlands with fertile volcanic soil yielding complex flavor profiles.",
     "f3Title": "Local Farmer Selection",
     "f3Desc": "Direct partnerships with local farmers ensure fair pricing and top harvest quality every season."
+  },
+  "wholesale": {
+    "badge": "B2B & Wholesale",
+    "headline": "Coffee Supply for Cafes, Roasteries, & Hotels.",
+    "description": "We provide bulk Green Bean and Roasted Bean orders directly from Enrekang with consistent specialty quality and dedicated partner pricing.",
+    "b1Title": "Wholesale Tiers from 5 kg",
+    "b1Desc": "Competitive volume pricing designed to support healthy margins for your coffee shop or roastery.",
+    "b2Title": "Custom Roast Profiles",
+    "b2Desc": "Tailor your roast level (Light, Medium, Dark) for house espresso blends or filter offerings.",
+    "b3Title": "Direct & Reliable Supply",
+    "b3Desc": "Sourced directly from 20+ partner farmers in Enrekang for dependable year-round availability.",
+    "ctaPriceList": "Request Wholesale Price",
+    "ctaSample": "Order B2B Sample",
+    "waPriceListMsg": "Hello COGURA, I am interested in a B2B/Wholesale partnership. Could you share the wholesale price list for cafes/roasteries?",
+    "waSampleMsg": "Hello COGURA, I would like to request an Enrekang Arabica sample for our cafe/roastery."
   },
   "footer": {
     "tagline": "Taste of Enrekang Arabica. Specialty coffee from the highlands of South Sulawesi, processed with dedication.",

@@ -44,6 +44,11 @@ export function Footer({ lang, dict, nav }: FooterProps) {
                   {nav.products}
                 </a>
               </li>
+              <li>
+                <a href={`/${lang}#wholesale`} className="transition-colors hover:text-primary">
+                  {nav.wholesale}
+                </a>
+              </li>
             </ul>
           </div>
 

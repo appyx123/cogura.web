@@ -7,6 +7,7 @@
     "home": "Beranda",
     "story": "Cerita",
     "products": "Produk",
+    "wholesale": "Mitra B2B",
     "contact": "Hubungi Kami"
   },
   "hero": {
@@ -71,6 +72,21 @@
     "f2Desc": "Ditanam di dataran tinggi Enrekang dengan tanah vulkanik subur yang menghasilkan karakter rasa kompleks.",
     "f3Title": "Pilihan Petani Lokal",
     "f3Desc": "Kemitraan langsung dengan petani lokal memastikan harga yang adil dan kualitas panen terbaik setiap musim."
+  },
+  "wholesale": {
+    "badge": "B2B & Wholesale",
+    "headline": "Suplai Kopi untuk Kafe, Roastery, & Hotel.",
+    "description": "Kami melayani pembelian partai besar Green Bean maupun Roasted Bean langsung dari Enrekang dengan kualitas konsisten dan harga kemitraan khusus.",
+    "b1Title": "Harga Grosir Mulai 5 kg",
+    "b1Desc": "Struktur harga berjenjang yang kompetitif untuk menjaga margin bisnis kedai kopi dan roastery Anda.",
+    "b2Title": "Profil Sangrai Kustom",
+    "b2Desc": "Sesuaikan tingkat sangrai (Light, Medium, Dark) untuk kebutuhan espresso blend maupun manual brew kafe Anda.",
+    "b3Title": "Pasokan Langsung & Stabil",
+    "b3Desc": "Bekerja langsung dengan 20+ petani mitra di Enrekang untuk menjamin ketersediaan stok sepanjang tahun.",
+    "ctaPriceList": "Minta Harga Grosir",
+    "ctaSample": "Pesan Sampel B2B",
+    "waPriceListMsg": "Halo COGURA, saya tertarik dengan kemitraan B2B/Grosir. Boleh minta daftar harga khusus untuk kafe/roastery?",
+    "waSampleMsg": "Halo COGURA, saya ingin memesan sampel kopi Arabika Enrekang untuk kebutuhan kafe/roastery."
   },
   "footer": {
     "tagline": "Taste of Enrekang Arabica. Kopi specialty dari dataran tinggi Sulawesi Selatan, diproses dengan dedikasi.",
