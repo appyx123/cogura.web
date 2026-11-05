@@ -7,6 +7,7 @@
     "home": "Home",
     "story": "Story",
     "products": "Products",
+    "brew": "Brew Guide",
     "wholesale": "Wholesale",
     "contact": "Contact Us"
   },
@@ -61,7 +62,77 @@
       }
     },
     "waMsg": "Hello COGURA, I would like to order {name} size {weight}.",
-    "waMsgRoast": "Hello COGURA, I would like to order {name} size {weight} with {roast} roast level."
+    "waMsgRoast": "Hello COGURA, I would like to order {name} size {weight} with {roast} roast level.",
+    "addToCart": "+ Add to Cart",
+    "added": "Added",
+    "cartTitle": "Your Order Cart",
+    "cartSubtitle": "Review your items before sending via WhatsApp.",
+    "cartEmpty": "Your cart is empty. Select a coffee variant first.",
+    "cartTotal": "Estimated Total",
+    "customerName": "Your Name (Optional)",
+    "customerNamePlaceholder": "e.g. Alex",
+    "customerAddress": "City / Delivery Address (Optional)",
+    "customerAddressPlaceholder": "e.g. Makassar / Sudirman St. No. 10",
+    "checkoutWa": "Checkout via WhatsApp",
+    "clearCart": "Clear",
+    "waCartIntro": "Hello COGURA, I would like to order:",
+    "waCartTotal": "Estimated Total",
+    "waCartName": "Name",
+    "waCartAddress": "Address/City"
+  },
+  "brewingGuide": {
+    "badge": "Brewing Guide",
+    "headline": "How to Brew the Perfect COGURA Cup.",
+    "subtitle": "Recommended ratios and water temperatures to unlock the floral, ripe berry, and smooth body notes of Enrekang Arabica.",
+    "coffeeLabel": "Coffee Dose",
+    "waterLabel": "Water Volume",
+    "tempLabel": "Water Temp",
+    "timeLabel": "Brew Time",
+    "stepsHeader": "Brewing Steps",
+    "methods": [
+      {
+        "id": "tubruk",
+        "name": "Indonesian Tubruk",
+        "tagline": "Simple · Full Body · Traditional",
+        "coffee": "12g (1.5 tbsp)",
+        "water": "180 ml",
+        "temp": "92–94°C",
+        "time": "4 mins",
+        "steps": [
+          "Add 12g of COGURA ground coffee into a pre-warmed mug.",
+          "Pour 180 ml of hot water (let boiling water rest for 1 minute to reach ~93°C).",
+          "Stir gently 3–4 times, let it steep for 4 minutes until grounds settle, and enjoy."
+        ]
+      },
+      {
+        "id": "v60",
+        "name": "V60 / Pour Over",
+        "tagline": "Clean · Floral · Complex",
+        "coffee": "15g",
+        "water": "225 ml (1:15 Ratio)",
+        "temp": "90–92°C",
+        "time": "2:15 – 2:30 mins",
+        "steps": [
+          "Rinse the paper filter with hot water, then add 15g of COGURA coffee.",
+          "Bloom: pour 30–40 ml of hot water in circles and wait for 30 seconds.",
+          "Continue pouring in stages up to 225 ml, finishing around 2 minutes 30 seconds."
+        ]
+      },
+      {
+        "id": "french-press",
+        "name": "French Press / Drip",
+        "tagline": "Rich · Sweet · Smooth",
+        "coffee": "18g",
+        "water": "270 ml (1:15 Ratio)",
+        "temp": "92°C",
+        "time": "3:30 – 4 mins",
+        "steps": [
+          "Add 18g of coffee into your French Press or Vietnamese Drip brewer.",
+          "Pour 270 ml of 92°C hot water and gently stir the crust.",
+          "Steep for 4 minutes, press the plunger slowly, and serve immediately."
+        ]
+      }
+    ]
   },
   "whyChooseUs": {
     "badge": "Why COGURA",

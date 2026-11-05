@@ -7,6 +7,7 @@
     "home": "Beranda",
     "story": "Cerita",
     "products": "Produk",
+    "brew": "Panduan Seduh",
     "wholesale": "Mitra B2B",
     "contact": "Hubungi Kami"
   },
@@ -61,7 +62,77 @@
       }
     },
     "waMsg": "Halo COGURA, saya ingin memesan {name} ukuran {weight}.",
-    "waMsgRoast": "Halo COGURA, saya ingin memesan {name} ukuran {weight} dengan tingkat roasting {roast}."
+    "waMsgRoast": "Halo COGURA, saya ingin memesan {name} ukuran {weight} dengan tingkat roasting {roast}.",
+    "addToCart": "+ Keranjang",
+    "added": "Ditambahkan",
+    "cartTitle": "Keranjang Pesanan",
+    "cartSubtitle": " Periksa pesanan Anda sebelum dikirim ke WhatsApp.",
+    "cartEmpty": "Keranjang masih kosong. Pilih varian kopi terlebih dahulu.",
+    "cartTotal": "Total Estimasi",
+    "customerName": "Nama Pemesan (Opsional)",
+    "customerNamePlaceholder": "Contoh: Budi",
+    "customerAddress": "Kota / Alamat Pengiriman (Opsional)",
+    "customerAddressPlaceholder": "Contoh: Makassar / Jl. Sudirman No. 10",
+    "checkoutWa": "Checkout via WhatsApp",
+    "clearCart": "Kosongkan",
+    "waCartIntro": "Halo COGURA, saya ingin memesan:",
+    "waCartTotal": "Total Estimasi",
+    "waCartName": "Nama",
+    "waCartAddress": "Alamat/Kota"
+  },
+  "brewingGuide": {
+    "badge": "Brewing Guide",
+    "headline": "Cara Seduh Terbaik untuk Kopi COGURA.",
+    "subtitle": "Takaran dan suhu air yang tepat untuk mengeluarkan karakter floral, buah beri, dan body lembut khas Arabika Enrekang.",
+    "coffeeLabel": "Takaran Kopi",
+    "waterLabel": "Volume Air",
+    "tempLabel": "Suhu Air",
+    "timeLabel": "Waktu Seduh",
+    "stepsHeader": "Langkah Seduh",
+    "methods": [
+      {
+        "id": "tubruk",
+        "name": "Kopi Tubruk",
+        "tagline": "Praktis · Body Penuh · Tradisional",
+        "coffee": "12 gram (1,5 sdm)",
+        "water": "180 ml",
+        "temp": "92–94°C",
+        "time": "4 menit",
+        "steps": [
+          "Masukkan 12 gram kopi bubuk COGURA ke dalam cangkir yang sudah dihangatkan.",
+          "Tuangkan 180 ml air panas (diamkan air mendidih selama 1 menit agar suhu turun ke ~93°C).",
+          "Aduk perlahan 3–4 kali, diamkan 4 menit hingga ampas turun, lalu nikmati."
+        ]
+      },
+      {
+        "id": "v60",
+        "name": "V60 / Filter",
+        "tagline": "Bersih · Floral · Kompleks",
+        "coffee": "15 gram",
+        "water": "225 ml (Rasio 1:15)",
+        "temp": "90–92°C",
+        "time": "2:15 – 2:30 menit",
+        "steps": [
+          "Bilas kertas filter dengan air panas, lalu masukkan 15 gram kopi COGURA.",
+          "Blooming: tuang 30–40 ml air panas secara melingkar dan diamkan selama 30 detik.",
+          "Lanjutkan tuangan bertahap hingga 225 ml sampai waktu seduh mencapai ~2 menit 30 detik."
+        ]
+      },
+      {
+        "id": "french-press",
+        "name": "French Press / Drip",
+        "tagline": "Kaya Rasa · Manis · Lembut",
+        "coffee": "18 gram",
+        "water": "270 ml (Rasio 1:15)",
+        "temp": "92°C",
+        "time": "3:30 – 4 menit",
+        "steps": [
+          "Masukkan 18 gram kopi ke dalam French Press atau Vietnam Drip.",
+          "Tuangkan 270 ml air panas suhu 92°C, aduk permukaan kopi secara perlahan.",
+          "Tutup dan tunggu 4 menit, tekan plunger perlahan lalu segera tuang ke cangkir."
+        ]
+      }
+    ]
   },
   "whyChooseUs": {
     "badge": "Why COGURA",

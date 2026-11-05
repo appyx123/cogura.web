@@ -45,6 +45,11 @@ export function Footer({ lang, dict, nav }: FooterProps) {
                 </a>
               </li>
               <li>
+                <a href={`/${lang}#brew`} className="transition-colors hover:text-primary">
+                  {nav.brew}
+                </a>
+              </li>
+              <li>
                 <a href={`/${lang}#wholesale`} className="transition-colors hover:text-primary">
                   {nav.wholesale}
                 </a>

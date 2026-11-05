@@ -18,6 +18,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
     { label: dict.home, href: `/${lang}#home` },
     { label: dict.story, href: `/${lang}#story` },
     { label: dict.products, href: `/${lang}#products` },
+    { label: dict.brew, href: `/${lang}#brew` },
     { label: dict.wholesale, href: `/${lang}#wholesale` },
   ]
 

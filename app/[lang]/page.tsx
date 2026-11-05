@@ -4,6 +4,7 @@ import { Navbar } from "@/components/cogura/navbar"
 import { Hero } from "@/components/cogura/hero"
 import { Story } from "@/components/cogura/story"
 import { Products } from "@/components/cogura/products"
+import { BrewingGuide } from "@/components/cogura/brewing-guide"
 import { WhyChooseUs } from "@/components/cogura/why-choose-us"
 import { Wholesale } from "@/components/cogura/wholesale"
 import { Footer } from "@/components/cogura/footer"
@@ -92,6 +93,7 @@ export default async function Page({
       <Hero lang={lang} dict={dict.hero} />
       <Story dict={dict.story} />
       <Products lang={lang} dict={dict.products} />
+      <BrewingGuide dict={dict.brewingGuide} />
       <WhyChooseUs dict={dict.whyChooseUs} />
       <Wholesale dict={dict.wholesale} />
       <Footer lang={lang} dict={dict.footer} nav={dict.navbar} />
