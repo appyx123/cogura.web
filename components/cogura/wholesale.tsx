@@ -1,4 +1,4 @@
-import { PackageCheck, Flame, Handshake } from "lucide-react"
+import { PackageCheck, Flame, Handshake, ShieldCheck, Calendar } from "lucide-react"
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon"
 import { Dictionary } from "@/lib/get-dictionary"
 
@@ -43,6 +43,32 @@ export function Wholesale({ dict }: WholesaleProps) {
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
                 {dict.description}
               </p>
+
+              {/* Official GI Registration & Harvest Calendar */}
+              <div className="mt-6 space-y-3 rounded-2xl border border-border/80 bg-secondary/40 p-4">
+                <div className="flex items-start gap-3">
+                  <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
+                  <div>
+                    <p className="font-display text-xs font-bold uppercase tracking-wider text-primary">
+                      {dict.igBadgeTitle}
+                    </p>
+                    <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">
+                      {dict.igBadgeSub}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 border-t border-border/70 pt-3">
+                  <Calendar className="mt-0.5 h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
+                  <div>
+                    <p className="font-display text-xs font-bold uppercase tracking-wider text-primary">
+                      {dict.harvestLabel}
+                    </p>
+                    <p className="mt-0.5 text-xs text-muted-foreground">
+                      {dict.harvestMain} · {dict.harvestFly}
+                    </p>
+                  </div>
+                </div>
+              </div>
 
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <a

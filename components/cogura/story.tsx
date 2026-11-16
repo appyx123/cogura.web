@@ -21,10 +21,10 @@ export function Story({ dict }: StoryProps) {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 hidden h-32 w-32 items-center justify-center rounded-full bg-accent text-center font-display text-sm font-bold leading-tight text-accent-foreground shadow-xl md:flex">
-              Enrekang
+            <div className="absolute -bottom-6 -right-6 hidden h-32 w-32 items-center justify-center rounded-full bg-accent p-3 text-center font-display text-xs font-bold leading-tight text-accent-foreground shadow-xl md:flex">
+              {dict.stampLine1}
               <br />
-              Est. 1900s
+              {dict.stampLine2}
             </div>
           </div>
         </div>
@@ -41,15 +41,15 @@ export function Story({ dict }: StoryProps) {
 
           <div className="mt-10 grid grid-cols-2 gap-6 border-t border-border pt-8 sm:grid-cols-3">
             <div>
-              <p className="font-display text-3xl font-bold text-primary">20+</p>
+              <p className="font-display text-2xl font-bold text-primary md:text-3xl">{dict.metricFarmersVal}</p>
               <p className="mt-1 text-sm text-muted-foreground">{dict.metricFarmers}</p>
             </div>
             <div>
-              <p className="font-display text-3xl font-bold text-primary">3</p>
+              <p className="font-display text-2xl font-bold text-primary md:text-3xl">{dict.metricMethodsVal}</p>
               <p className="mt-1 text-sm text-muted-foreground">{dict.metricMethods}</p>
             </div>
             <div>
-              <p className="font-display text-3xl font-bold text-primary">100%</p>
+              <p className="font-display text-2xl font-bold text-primary md:text-3xl">{dict.metricOriginVal}</p>
               <p className="mt-1 text-sm text-muted-foreground">{dict.metricOrigin}</p>
             </div>
           </div>

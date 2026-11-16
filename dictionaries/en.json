@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "COGURA - Premium Arabica Coffee from Enrekang Highlands",
-    "description": "Experience true delight with premium Arabica coffee from the volcanic slopes of Enrekang, South Sulawesi. Processed with full dedication for a perfect cup every time."
+    "title": "COGURA - Dusun Gura, Buntu Mondong · Enrekang Arabica Coffee",
+    "description": "Specialty Arabica coffee from Dusun Gura, Buntu Mondong Village, Enrekang (1,300–1,600m ASL). Protected by Geographical Indication Kalosi Enrekang (IDG000000018) and traditionally roof-dried."
   },
   "navbar": {
     "home": "Home",
@@ -12,34 +12,50 @@
     "contact": "Contact Us"
   },
   "hero": {
-    "badge": "Single Origin · Sulawesi",
+    "badge": "Single Origin · Dusun Gura, Buntu Mondong — Enrekang (Latimojong Slopes)",
     "headlinePrefix": "Experience Authentic",
     "headlineHighlight": "Enrekang Arabica",
-    "description": "Premium coffee from the highlands of South Sulawesi, crafted with dedication for a cup of perfection.",
+    "description": "High-altitude Arabica from Dusun Gura on the slopes of Mount Latimojong (1,300–1,600m ASL). Slow cherry maturation yields dense Strictly Hard Beans (SHB) with natural sweetness, warm spice, and stomach-friendly low-to-medium acidity.",
     "ctaOrder": "Order Now",
     "ctaStory": "Our Story",
-    "trustAltitude": "Altitude",
-    "trustRoast": "Roast",
-    "trustFarmers": "Farmers",
-    "trustRoastVal": "Fresh",
-    "trustFarmersVal": "Local",
-    "cardTitle": "Enrekang Arabica",
-    "cardSub": "Select Harvest 2025",
-    "cuppingScore": "Cupping Score"
+    "trustAltitude": "Altitude (SHB)",
+    "trustAltitudeVal": "1,300–1,600m",
+    "trustRoast": "Primary Process",
+    "trustFarmers": "Kalosi Heritage",
+    "trustRoastVal": "Full Wash",
+    "trustFarmersVal": "Since 1750s",
+    "cardTitle": "Dusun Gura Arabica",
+    "cardSub": "GI Kalosi Enrekang · IDG000000018",
+    "cuppingScore": "SCA Score",
+    "cuppingScoreVal": "83.5 – 85.5+"
   },
   "story": {
-    "badge": "Our Story",
-    "headline": "Coffee heritage from the land of Gura, Enrekang.",
-    "p1": "On the mountain slopes of Enrekang, South Sulawesi, grows legendary Arabica beans known worldwide since the early 20th century as Enrekang Arabica. An altitude of 1,500m above sea level, fertile volcanic soil, and a cool climate impart complex flavors of floral notes, ripe berries, and a smooth body.",
-    "p2": "COGURA was born from a desire to bring this exceptional coffee to coffee enthusiasts across the archipelago. We work directly with local farmers, meticulously managing every process from red cherry selection to roasting so authentic flavor lives in every brew.",
-    "metricFarmers": "Partner Farmers",
-    "metricMethods": "Process Methods",
-    "metricOrigin": "Single Origin"
+    "badge": "Our Story · Dusun Gura",
+    "headline": "Kalosi coffee heritage since the 1750s from the land of Gura, Buntu Mondong.",
+    "p1": "The name COGURA is rooted directly in Dusun Gura, Buntu Mondong Village, Buntu Batu District — the coffee heartland on the slopes of Mount Latimojong carrying forward the Kalosi Arabica heritage since the 1750s. At 1,300–1,600m ASL with a cool 17°C–19°C microclimate and iron-rich ancient volcanic soil (podzolic Lixisols), coffee trees are shade-grown under the local Sistem Pekon agroforestry wisdom with minimal synthetic chemicals.",
+    "p2": "Buntu Mondong farmers practice a signature Roof-Drying tradition: coffee parchment is dried on dedicated upper roofs built atop farmers' homes rather than on bare ground. This keeps beans free from soil-borne mold contamination (clean cup), maximizes mountain wind circulation, and allows rapid cover when sudden highland rain arrives.",
+    "stampLine1": "Kalosi Heritage",
+    "stampLine2": "Since 1750s",
+    "metricFarmersVal": "20+",
+    "metricFarmers": "Dusun Gura Partner Farmers",
+    "metricMethodsVal": "Roof-Dried",
+    "metricMethods": "Clean Elevated Drying",
+    "metricOriginVal": "IDG000000018",
+    "metricOrigin": "Official GI Registration"
   },
   "products": {
-    "badge": "Coffee Selection",
-    "headline": "Enrekang Coffee Variants",
-    "subtitle": "From raw Green Beans to ready-to-brew ground coffee, choose according to your taste and needs.",
+    "badge": "Coffee Selection · Dusun Gura",
+    "headline": "Enrekang Arabica Variants",
+    "subtitle": "Harvested from shade-grown gardens in Dusun Gura at 1,300–1,600m ASL (Strictly Hard Bean). Naturally sweet & mellow with stomach-friendly low-to-medium acidity.",
+    "specsLabel": "Dusun Gura Lot Specifications",
+    "varietiesLabel": "Varieties (Genetic Pool)",
+    "varietiesValue": "Typica · Lini S-795 · Kartika · Andungsari-1 · Bourbon",
+    "processLabel": "Post-Harvest Process",
+    "processActive": "Full Wash (Available · SCA ~83.5 — Clean, dark chocolate, cinnamon spice)",
+    "processComingSoonLabel": "Coming Soon:",
+    "processComingSoonValue": "Honey (~85.25) · Natural (~85.0) · Wine Anaerobic (~85.55) · Peaberry",
+    "characterLabel": "Cup Character",
+    "characterValue": "Sweet & mellow, full body, low-to-medium acidity (gentle on the stomach)",
     "roastLevel": "Roast Level",
     "sizeWeight": "Size / Weight",
     "price": "Price",
@@ -47,18 +63,18 @@
     "items": {
       "greenBean": {
         "name": "Green Bean Arabica",
-        "tagline": "Raw · Fresh · Authentic",
-        "description": "High-quality raw coffee beans from Enrekang highlands. Perfect for roasters looking to explore their own roast profiles."
+        "tagline": "Full Wash · SHB 1,300–1,600m ASL",
+        "description": "Raw Full Wash green beans roof-dried on elevated farmer decks in Buntu Mondong. Clean, dense, and ready for roasters to profile."
       },
       "wholeBean": {
         "name": "Whole Bean Roasted",
-        "tagline": "Freshly Roasted · Aromatic",
-        "description": "Freshly roasted coffee beans locking in optimal aroma and flavor. Perfect for freshly grinding before brewing."
+        "tagline": "Freshly Roasted · Full Wash",
+        "description": "Freshly roasted beans from Typica, Lini S-795, Kartika, Andungsari-1 & Bourbon cultivars. Locks in dark chocolate, cinnamon spice, and caramel sweetness."
       },
       "ground": {
         "name": "Ground Coffee",
-        "tagline": "Ready to Brew · Convenient",
-        "description": "Premium ground coffee precision-milled for maximum convenience to accompany your days."
+        "tagline": "Ready to Brew · Gentle Acidity",
+        "description": "Precision-milled pure Dusun Gura Arabica. Delivers a full body, natural sweetness, and smooth low-to-medium acidity for everyday brewing."
       }
     },
     "waMsg": "Hello COGURA, I would like to order {name} size {weight}.",
@@ -136,36 +152,41 @@
   },
   "whyChooseUs": {
     "badge": "Why COGURA",
-    "headline": "Crafted with dedication, brewed with love.",
-    "f1Title": "100% Arabica",
-    "f1Desc": "Only selected specialty-grade Arabica beans processed, with no blends and no compromises on quality.",
-    "f2Title": "1,500m Altitude",
-    "f2Desc": "Grown in Enrekang highlands with fertile volcanic soil yielding complex flavor profiles.",
-    "f3Title": "Local Farmer Selection",
-    "f3Desc": "Direct partnerships with local farmers ensure fair pricing and top harvest quality every season."
+    "headline": "Legally protected origin, high-altitude density, roof-dried tradition.",
+    "f1Title": "Official GI IDG000000018",
+    "f1Desc": "Officially registered with Indonesia's DJKI Kemenkumham as Kalosi Enrekang Arabica — guaranteeing 100% authentic Dusun Gura single-origin beans without adulteration.",
+    "f2Title": "1,300–1,600m ASL (SHB)",
+    "f2Desc": "Grown on the 17°C–19°C slopes of Mount Latimojong in iron-rich volcanic Lixisols soil, producing dense Strictly Hard Bean (SHB) cherries.",
+    "f3Title": "Roof-Drying & Sistem Pekon",
+    "f3Desc": "Cultivated ecologically under Sistem Pekon shade trees and dried on elevated rooftop decks above farmers' homes for a clean, mold-free cup."
   },
   "wholesale": {
-    "badge": "B2B & Wholesale",
-    "headline": "Coffee Supply for Cafes, Roasteries, & Hotels.",
-    "description": "We provide bulk Green Bean and Roasted Bean orders directly from Enrekang with consistent specialty quality and dedicated partner pricing.",
+    "badge": "B2B & Wholesale · GI IDG000000018",
+    "headline": "Verified Coffee Supply for Cafes, Roasteries, & Exporters.",
+    "description": "We fulfill bulk Green Bean and Roasted Bean orders directly from Dusun Gura, Buntu Mondong Village — backed by official Geographical Indication protection and measurable regional production capacity.",
+    "igBadgeTitle": "Protected Geographical Indication (GI) Kalosi Enrekang Arabica",
+    "igBadgeSub": "Reg. No. IDG000000018 · DJKI Kemenkumham RI — Legal guarantee of 100% authentic Enrekang origin, free from broker blending.",
+    "harvestLabel": "Harvest Calendar",
+    "harvestMain": "Main Crop: June – September",
+    "harvestFly": "Fly Crop: Early Year (January – March)",
     "b1Title": "Wholesale Tiers from 5 kg",
-    "b1Desc": "Competitive volume pricing designed to support healthy margins for your coffee shop or roastery.",
-    "b2Title": "Custom Roast Profiles",
-    "b2Desc": "Tailor your roast level (Light, Medium, Dark) for house espresso blends or filter offerings.",
-    "b3Title": "Direct & Reliable Supply",
-    "b3Desc": "Sourced directly from 20+ partner farmers in Enrekang for dependable year-round availability.",
+    "b1Desc": "Competitive volume pricing structured to protect margins for your cafe, hotel, or roastery.",
+    "b2Title": "Custom Roast & Traceable Lots",
+    "b2Desc": "Tailor your roast profile (Light, Medium, Dark) from traceable Dusun Gura Full Wash lots.",
+    "b3Title": "±2,400 Tons/Year Regional Capacity",
+    "b3Desc": "Supported by Buntu Batu District's ±3,396 ha productive area (±2,394–2,489 tons/year output) and 20+ direct partner farmers.",
     "ctaPriceList": "Request Wholesale Price",
     "ctaSample": "Order B2B Sample",
-    "waPriceListMsg": "Hello COGURA, I am interested in a B2B/Wholesale partnership. Could you share the wholesale price list for cafes/roasteries?",
-    "waSampleMsg": "Hello COGURA, I would like to request an Enrekang Arabica sample for our cafe/roastery."
+    "waPriceListMsg": "Hello COGURA, I am interested in a B2B/Wholesale partnership for Dusun Gura Arabica (GI IDG000000018). Could you share the wholesale price list?",
+    "waSampleMsg": "Hello COGURA, I would like to request a Dusun Gura (Enrekang) Arabica sample for our cafe/roastery."
   },
   "footer": {
-    "tagline": "Taste of Enrekang Arabica. Specialty coffee from the highlands of South Sulawesi, processed with dedication.",
+    "tagline": "Taste of Enrekang Arabica. Specialty coffee from Dusun Gura, Buntu Mondong Village (1,300–1,600m ASL) — Protected GI Kalosi Enrekang No. IDG000000018.",
     "menuHeader": "Menu",
     "contactHeader": "Contact Us",
-    "address": "Enrekang, South Sulawesi",
+    "address": "Dusun Gura, Buntu Mondong Village, Buntu Batu District, Enrekang, South Sulawesi",
     "copy": "COGURA. Taste of Enrekang Arabica. All rights reserved.",
-    "footerNote": "Brewed with care in South Sulawesi."
+    "footerNote": "Single Origin Dusun Gura · GI Reg. IDG000000018"
   },
   "notFound": {
     "title": "404",

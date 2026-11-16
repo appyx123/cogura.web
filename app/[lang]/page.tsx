@@ -31,6 +31,14 @@ export default async function Page({
           description: dict.products.items.greenBean.description,
           image: "https://cogura.store/green.webp",
           brand: { "@type": "Brand", name: "COGURA" },
+          countryOfOrigin: "ID",
+          additionalProperty: [
+            { "@type": "PropertyValue", name: "Origin", value: "Dusun Gura, Desa Buntu Mondong, Enrekang" },
+            { "@type": "PropertyValue", name: "Altitude", value: "1300-1600 masl (SHB)" },
+            { "@type": "PropertyValue", name: "Varieties", value: "Typica, Lini S-795, Kartika, Andungsari-1, Bourbon" },
+            { "@type": "PropertyValue", name: "Process", value: "Full Wash (Roof-Dried)" },
+            { "@type": "PropertyValue", name: "Geographical Indication", value: "IDG000000018 (Kopi Arabika Kalosi Enrekang)" },
+          ],
           offers: {
             "@type": "Offer",
             url: `https://cogura.store/${lang}#products`,
@@ -49,6 +57,12 @@ export default async function Page({
           description: dict.products.items.wholeBean.description,
           image: "https://cogura.store/roasted.webp",
           brand: { "@type": "Brand", name: "COGURA" },
+          countryOfOrigin: "ID",
+          additionalProperty: [
+            { "@type": "PropertyValue", name: "Origin", value: "Dusun Gura, Desa Buntu Mondong, Enrekang" },
+            { "@type": "PropertyValue", name: "Process", value: "Full Wash (Roof-Dried)" },
+            { "@type": "PropertyValue", name: "Geographical Indication", value: "IDG000000018" },
+          ],
           offers: {
             "@type": "AggregateOffer",
             url: `https://cogura.store/${lang}#products`,
@@ -69,6 +83,12 @@ export default async function Page({
           description: dict.products.items.ground.description,
           image: "https://cogura.store/bubuk.webp",
           brand: { "@type": "Brand", name: "COGURA" },
+          countryOfOrigin: "ID",
+          additionalProperty: [
+            { "@type": "PropertyValue", name: "Origin", value: "Dusun Gura, Desa Buntu Mondong, Enrekang" },
+            { "@type": "PropertyValue", name: "Process", value: "Full Wash (Roof-Dried)" },
+            { "@type": "PropertyValue", name: "Geographical Indication", value: "IDG000000018" },
+          ],
           offers: {
             "@type": "AggregateOffer",
             url: `https://cogura.store/${lang}#products`,

@@ -52,18 +52,18 @@ export function Hero({ lang, dict }: HeroProps) {
           </div>
 
           {/* Trust strip */}
-          <dl className="mt-12 grid max-w-md grid-cols-3 gap-4 border-t border-border pt-8">
+          <dl className="mt-12 grid max-w-lg grid-cols-3 gap-4 border-t border-border pt-8">
             <div>
               <dt className="text-xs font-medium uppercase tracking-wider text-muted-foreground">{dict.trustAltitude}</dt>
-              <dd className="mt-1 font-display text-2xl font-bold text-primary">1500m</dd>
+              <dd className="mt-1 font-display text-lg font-bold text-primary md:text-xl">{dict.trustAltitudeVal}</dd>
             </div>
             <div>
               <dt className="text-xs font-medium uppercase tracking-wider text-muted-foreground">{dict.trustRoast}</dt>
-              <dd className="mt-1 font-display text-2xl font-bold text-primary">{dict.trustRoastVal}</dd>
+              <dd className="mt-1 font-display text-lg font-bold text-primary md:text-xl">{dict.trustRoastVal}</dd>
             </div>
             <div>
               <dt className="text-xs font-medium uppercase tracking-wider text-muted-foreground">{dict.trustFarmers}</dt>
-              <dd className="mt-1 font-display text-2xl font-bold text-primary">{dict.trustFarmersVal}</dd>
+              <dd className="mt-1 font-display text-lg font-bold text-primary md:text-xl">{dict.trustFarmersVal}</dd>
             </div>
           </dl>
         </div>
@@ -104,7 +104,7 @@ export function Hero({ lang, dict }: HeroProps) {
             </div>
             <div className="mt-4 flex items-center justify-between border-t border-border pt-3">
               <span className="text-xs text-muted-foreground">{dict.cuppingScore}</span>
-              <span className="font-display text-sm font-bold text-accent">86.5</span>
+              <span className="font-display text-sm font-bold text-accent">{dict.cuppingScoreVal}</span>
             </div>
           </div>
 

@@ -326,7 +326,29 @@ export function Products({ dict }: ProductsProps) {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {/* Technical Lot Specification Banner */}
+        <div className="mt-10 rounded-3xl border border-border bg-secondary/40 p-6 md:p-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">{dict.specsLabel}</p>
+          <div className="mt-4 grid gap-6 md:grid-cols-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{dict.varietiesLabel}</p>
+              <p className="mt-1.5 font-display text-sm font-bold text-primary md:text-base">{dict.varietiesValue}</p>
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{dict.processLabel}</p>
+              <p className="mt-1.5 font-display text-sm font-bold text-primary md:text-base">{dict.processActive}</p>
+              <p className="mt-1 text-xs text-muted-foreground">
+                <span className="font-semibold text-foreground/80">{dict.processComingSoonLabel}</span> {dict.processComingSoonValue}
+              </p>
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{dict.characterLabel}</p>
+              <p className="mt-1.5 font-display text-sm font-bold text-primary md:text-base">{dict.characterValue}</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {products.map((p) => (
             <ProductCard key={p.id} product={p} dict={dict} onAddToCart={handleAddToCart} />
           ))}
