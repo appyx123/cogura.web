@@ -1,6 +1,24 @@
 import { getDictionary, hasLocale } from "@/lib/get-dictionary"
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
+import { Montserrat, DM_Sans } from "next/font/google"
+import { Analytics, LocalBusinessSchema } from "@/components/cogura/root-extras"
+import { siteUrl } from "@/lib/site"
+import "../globals.css"
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
+})
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+})
 
 export const dynamicParams = false
 
@@ -18,6 +36,7 @@ export async function generateMetadata({
   const dict = await getDictionary(lang)
 
   return {
+    metadataBase: new URL(siteUrl),
     title: dict.meta.title,
     description: dict.meta.description,
     alternates: {
@@ -31,7 +50,7 @@ export async function generateMetadata({
     openGraph: {
       title: dict.meta.title,
       description: dict.meta.description,
-      url: `https://cogura.store/${lang}`,
+      url: `${siteUrl}/${lang}`,
       siteName: "COGURA",
       images: [
         {
@@ -51,6 +70,10 @@ export async function generateMetadata({
       description: dict.meta.description,
       images: ["/og-cover.jpg"],
     },
+    icons: {
+      icon: [{ url: "/logo.svg", type: "image/svg+xml" }],
+      apple: "/logo.svg",
+    },
   }
 }
 
@@ -65,13 +88,18 @@ export default async function LangLayout({
   if (!hasLocale(lang)) notFound()
 
   return (
-    <>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `document.documentElement.lang=${JSON.stringify(lang)};`,
-        }}
-      />
-      {children}
-    </>
+    <html
+      lang={lang}
+      className={`${montserrat.variable} ${dmSans.variable} bg-background`}
+      suppressHydrationWarning
+    >
+      <head>
+        <LocalBusinessSchema />
+      </head>
+      <body className="font-sans antialiased" suppressHydrationWarning>
+        <Analytics />
+        {children}
+      </body>
+    </html>
   )
 }
