@@ -14,3 +14,8 @@ next.user-config.*
 node_modules
 .next/
 .DS_Store
+# Static export output (built by CI / hosting platform)
+out/
+
+# TypeScript build cache
+*.tsbuildinfo
