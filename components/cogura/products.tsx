@@ -197,6 +197,9 @@ export function Products({ dict }: ProductsProps) {
       const saved = window.localStorage.getItem(CART_STORAGE_KEY)
       if (saved) {
         const parsed = JSON.parse(saved)
+        // Cart lives in localStorage only; restoring it after mount avoids a
+        // server/client hydration mismatch on the floating cart button.
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         if (Array.isArray(parsed)) setCart(parsed)
       }
     } catch {

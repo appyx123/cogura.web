@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useState } from "react"
 import { Menu, X, Globe } from "lucide-react"
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon"
@@ -53,7 +54,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
           {/* Language Switcher */}
           <div className="flex items-center gap-1.5 rounded-full border border-border/80 bg-secondary/50 p-1 text-xs font-semibold">
             <Globe className="ml-1.5 h-3.5 w-3.5 text-muted-foreground" aria-hidden="true" />
-            <a
+            <Link
               href="/id"
               className={cn(
                 "rounded-full px-2.5 py-0.5 transition-all",
@@ -63,8 +64,8 @@ export function Navbar({ lang, dict }: NavbarProps) {
               )}
             >
               ID
-            </a>
-            <a
+            </Link>
+            <Link
               href="/en"
               className={cn(
                 "rounded-full px-2.5 py-0.5 transition-all",
@@ -74,7 +75,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
               )}
             >
               EN
-            </a>
+            </Link>
           </div>
 
           <a
@@ -91,7 +92,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
         {/* Mobile controls */}
         <div className="flex items-center gap-3 md:hidden">
           <div className="flex items-center gap-1 rounded-full border border-border/80 bg-secondary/50 p-1 text-xs font-semibold">
-            <a
+            <Link
               href="/id"
               className={cn(
                 "rounded-full px-2 py-0.5 transition-all",
@@ -101,8 +102,8 @@ export function Navbar({ lang, dict }: NavbarProps) {
               )}
             >
               ID
-            </a>
-            <a
+            </Link>
+            <Link
               href="/en"
               className={cn(
                 "rounded-full px-2 py-0.5 transition-all",
@@ -112,7 +113,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
               )}
             >
               EN
-            </a>
+            </Link>
           </div>
 
           <button

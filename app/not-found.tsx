@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function NotFound() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-background px-5 text-center">
@@ -6,12 +8,12 @@ export default function NotFound() {
       <p className="mt-4 max-w-md text-muted-foreground">
         Maaf, halaman yang Anda cari tidak tersedia atau telah dipindahkan. / Sorry, the page you are looking for is not available.
       </p>
-      <a
+      <Link
         href="/id"
         className="mt-10 inline-flex items-center gap-2 rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-accent-foreground shadow-md transition-all hover:shadow-xl hover:-translate-y-0.5"
       >
         Kembali ke Beranda / Back to Home
-      </a>
+      </Link>
     </div>
   );
 }
