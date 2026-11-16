@@ -35,9 +35,10 @@ export async function generateMetadata({
       siteName: "COGURA",
       images: [
         {
-          url: "/hero_image.webp",
+          url: "/og-cover.jpg",
           width: 1200,
           height: 630,
+          type: "image/jpeg",
           alt: "COGURA - Taste of Enrekang Arabica",
         },
       ],
@@ -48,7 +49,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: dict.meta.title,
       description: dict.meta.description,
-      images: ["/hero_image.webp"],
+      images: ["/og-cover.jpg"],
     },
   }
 }

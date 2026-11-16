@@ -29,9 +29,10 @@ export const metadata: Metadata = {
     siteName: "COGURA",
     images: [
       {
-        url: "/hero_image.webp",
+        url: "/og-cover.jpg",
         width: 1200,
         height: 630,
+        type: "image/jpeg",
         alt: "COGURA - Taste of Enrekang Arabica",
       },
     ],
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "COGURA - Kopi Arabika Premium dari Dataran Tinggi Enrekang",
     description: "Rasakan kenikmatan sejati kopi Arabika premium dari lereng vulkanik Enrekang, Sulawesi Selatan. Diproses dengan dedikasi penuh untuk kesempurnaan tiap cangkir.",
-    images: ["/hero_image.webp"],
+    images: ["/og-cover.jpg"],
   },
   icons: {
     icon: [
