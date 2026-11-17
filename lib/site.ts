@@ -8,7 +8,7 @@ export const localBusinessSchema = {
   name: "COGURA Coffee",
   image: `${siteUrl}/logo.svg`,
   description:
-    "Kopi Arabika Specialty Single Origin dari Dusun Gura, Desa Buntu Mondong, Enrekang (1.300–1.600 mdpl). Terlindungi Indikasi Geografis Kalosi Enrekang No. Reg. IDG000000018.",
+    "Kopi Arabika dari Dusun Gura, Desa Buntu Mondong, Enrekang (1.300-1.600 mdpl). Kawasan Indikasi Geografis Kalosi Enrekang No. Reg. IDG000000018.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Dusun Gura, Desa Buntu Mondong, Kecamatan Buntu Batu",

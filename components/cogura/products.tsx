@@ -411,7 +411,7 @@ export function Products({ dict }: ProductsProps) {
                       <p className="font-display text-sm font-bold text-primary">{item.name}</p>
                       <p className="mt-0.5 text-xs text-muted-foreground">
                         {item.weight}
-                        {item.roast ? ` · ${item.roast}` : ""} — {formatIdr(item.unitPrice)}
+                        {item.roast ? `, ${item.roast}` : ""} ({formatIdr(item.unitPrice)})
                       </p>
                       <p className="mt-1 font-display text-sm font-bold text-accent">
                         {formatIdr(item.unitPrice * item.qty)}

@@ -64,7 +64,7 @@ export function Wholesale({ dict }: WholesaleProps) {
                       {dict.harvestLabel}
                     </p>
                     <p className="mt-0.5 text-xs text-muted-foreground">
-                      {dict.harvestMain} · {dict.harvestFly}
+                      {dict.harvestMain} / {dict.harvestFly}
                     </p>
                   </div>
                 </div>

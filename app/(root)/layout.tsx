@@ -20,13 +20,13 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "COGURA - Kopi Arabika Premium dari Dataran Tinggi Enrekang",
+  title: "COGURA - Kopi Arabika Dusun Gura, Buntu Mondong, Enrekang",
   description:
-    "Rasakan kenikmatan sejati kopi Arabika premium dari lereng vulkanik Enrekang, Sulawesi Selatan. Diproses dengan dedikasi penuh untuk kesempurnaan tiap cangkir.",
+    "Kopi Arabika dari Dusun Gura, Desa Buntu Mondong, Enrekang (1.300-1.600 mdpl). Terdaftar Indikasi Geografis Kalosi Enrekang (IDG000000018), dijemur di atas atap rumah petani.",
   openGraph: {
-    title: "COGURA - Kopi Arabika Premium dari Dataran Tinggi Enrekang",
+    title: "COGURA - Kopi Arabika Dusun Gura, Buntu Mondong, Enrekang",
     description:
-      "Rasakan kenikmatan sejati kopi Arabika premium dari lereng vulkanik Enrekang, Sulawesi Selatan. Diproses dengan dedikasi penuh untuk kesempurnaan tiap cangkir.",
+      "Kopi Arabika dari Dusun Gura, Desa Buntu Mondong, Enrekang (1.300-1.600 mdpl). Terdaftar Indikasi Geografis Kalosi Enrekang (IDG000000018), dijemur di atas atap rumah petani.",
     url: siteUrl,
     siteName: "COGURA",
     images: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         type: "image/jpeg",
-        alt: "COGURA - Taste of Enrekang Arabica",
+        alt: "COGURA - Kopi Arabika Dusun Gura, Enrekang",
       },
     ],
     locale: "id_ID",
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "COGURA - Kopi Arabika Premium dari Dataran Tinggi Enrekang",
+    title: "COGURA - Kopi Arabika Dusun Gura, Buntu Mondong, Enrekang",
     description:
-      "Rasakan kenikmatan sejati kopi Arabika premium dari lereng vulkanik Enrekang, Sulawesi Selatan. Diproses dengan dedikasi penuh untuk kesempurnaan tiap cangkir.",
+      "Kopi Arabika dari Dusun Gura, Desa Buntu Mondong, Enrekang (1.300-1.600 mdpl). Terdaftar Indikasi Geografis Kalosi Enrekang (IDG000000018), dijemur di atas atap rumah petani.",
     images: ["/og-cover.jpg"],
   },
   icons: {
